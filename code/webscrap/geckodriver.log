@@ -1,0 +1,95 @@
+1651613928266	geckodriver	INFO	Listening on 127.0.0.1:50144
+1651613931289	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50145" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\DANIEL~1\\AppData\\Local\\Temp\\rust_mozprofileSQN2gv"
+1651613931570	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\DANIEL~1\\AppData\\Local\\Temp\\rust_mozprofileSQN2gv\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:50145/devtools/browser/05a76e6c-14f9-4864-a44b-d8fabbda7f87
+1651613933170	Marionette	INFO	Listening on port 50173
+Read port: 50173
+1651613933321	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://consultas.funcionjudicial.gob.ec"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://consultas.funcionjudicial.gob.ec"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://consultas.funcionjudicial.gob.ec"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://consultas.funcionjudicial.gob.ec"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://consultas.funcionjudicial.gob.ec"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://consultas.funcionjudicial.gob.ec"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://consultas.funcionjudicial.gob.ec"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://consultas.funcionjudicial.gob.ec"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://consultas.funcionjudicial.gob.ec"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://consultas.funcionjudicial.gob.ec"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://consultas.funcionjudicial.gob.ec"
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1651614562076	Marionette	INFO	Stopped listening on port 50173
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1651614587885	geckodriver	INFO	Listening on 127.0.0.1:50334
+1651614590911	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50335" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\DANIEL~1\\AppData\\Local\\Temp\\rust_mozprofileKmFzNM"
+1651614591166	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\DANIEL~1\\AppData\\Local\\Temp\\rust_mozprofileKmFzNM\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:50335/devtools/browser/6d2258ab-ad97-4486-8d27-1e790d2dbb80
+1651614592651	Marionette	INFO	Listening on port 50364
+Read port: 50364
+1651614592689	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1651614770787	Marionette	INFO	Stopped listening on port 50364
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1651614772246	geckodriver	INFO	Listening on 127.0.0.1:50457
+1651614775278	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50458" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\DANIEL~1\\AppData\\Local\\Temp\\rust_mozprofileE0FHk4"
+1651614775515	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\DANIEL~1\\AppData\\Local\\Temp\\rust_mozprofileE0FHk4\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:50458/devtools/browser/4437d4e8-1a26-4b4d-8f84-a6138817b3d6
+1651614776966	Marionette	INFO	Listening on port 50487
+Read port: 50487
+1651614777045	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://consultas.funcionjudicial.gob.ec"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://consultas.funcionjudicial.gob.ec"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://consultas.funcionjudicial.gob.ec"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://consultas.funcionjudicial.gob.ec"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://consultas.funcionjudicial.gob.ec"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://consultas.funcionjudicial.gob.ec"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://consultas.funcionjudicial.gob.ec"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://consultas.funcionjudicial.gob.ec"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://consultas.funcionjudicial.gob.ec"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://consultas.funcionjudicial.gob.ec"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://consultas.funcionjudicial.gob.ec"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://consultas.funcionjudicial.gob.ec"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://consultas.funcionjudicial.gob.ec"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://consultas.funcionjudicial.gob.ec"
+1651615158109	Marionette	INFO	Stopped listening on port 50487
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1651616969135	geckodriver	INFO	Listening on 127.0.0.1:51140
+1651616972161	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51141" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\DANIEL~1\\AppData\\Local\\Temp\\rust_mozprofileGzmQUX"
+1651616972400	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\DANIEL~1\\AppData\\Local\\Temp\\rust_mozprofileGzmQUX\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51141/devtools/browser/076ce283-829e-45e8-a6ce-476aca6569cd
+1651616973835	Marionette	INFO	Listening on port 51170
+Read port: 51170
+1651616973923	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://consultas.funcionjudicial.gob.ec"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://consultas.funcionjudicial.gob.ec"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://consultas.funcionjudicial.gob.ec"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://consultas.funcionjudicial.gob.ec"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://consultas.funcionjudicial.gob.ec"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://consultas.funcionjudicial.gob.ec"
+1651617185726	Marionette	INFO	Stopped listening on port 51170
+1651617202382	geckodriver	INFO	Listening on 127.0.0.1:51263
+1651617205423	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51264" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\DANIEL~1\\AppData\\Local\\Temp\\rust_mozprofileXE2S8q"
+1651617205657	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\DANIEL~1\\AppData\\Local\\Temp\\rust_mozprofileXE2S8q\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51264/devtools/browser/ff5a713c-c49d-4e34-bc5a-2f7a58137704
+1651617207068	Marionette	INFO	Listening on port 51291
+Read port: 51291
+1651617207175	RemoteAgent	WARN	TLS certificate errors will be ignored for this session

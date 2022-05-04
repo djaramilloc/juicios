@@ -603,3 +603,200 @@ console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message f
 console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://consultas.funcionjudicial.gob.ec"
 console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://consultas.funcionjudicial.gob.ec"
 console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://consultas.funcionjudicial.gob.ec"
+1651628638927	geckodriver	INFO	Listening on 127.0.0.1:56015
+1651628642004	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56016" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\jaram\\AppData\\Local\\Temp\\rust_mozprofile5ihx8B"
+1651628664742	geckodriver	INFO	Listening on 127.0.0.1:56093
+1651628667810	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56094" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\jaram\\AppData\\Local\\Temp\\rust_mozprofilenbp7Wq"
+1651628670098	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\jaram\\AppData\\Local\\Temp\\rust_mozprofilenbp7Wq\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:56094/devtools/browser/cc25b3d1-1314-476e-a90a-bdc5ea17e352
+1651628672938	Marionette	INFO	Listening on port 56121
+Read port: 56121
+1651628673051	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1651628686248	Marionette	INFO	Stopped listening on port 56121
+1651628694226	geckodriver	INFO	Listening on 127.0.0.1:56140
+1651628697274	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.517 Safari/537.36" "--remote-debugging-port" "56141" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\jaram\\AppData\\Local\\Temp\\rust_mozprofileM8Fcoq"
+1651628697875	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\jaram\\AppData\\Local\\Temp\\rust_mozprofileM8Fcoq\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:56141/devtools/browser/447f27af-d48b-4858-91e4-79a99b11ed97
+1651628700889	Marionette	INFO	Listening on port 56171
+Read port: 56171
+1651628700945	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1651628787366	Marionette	INFO	Stopped listening on port 56171
+1651628970620	geckodriver	INFO	Listening on 127.0.0.1:56244
+1651628973648	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "start-maximized" "--remote-debugging-port" "56245" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\jaram\\AppData\\Local\\Temp\\rust_mozprofile37I4kC"
+1651628974393	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\jaram\\AppData\\Local\\Temp\\rust_mozprofile37I4kC\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:56245/devtools/browser/8450f87f-cd48-42ab-944a-a621e94daa95
+1651628977527	Marionette	INFO	Listening on port 56272
+Read port: 56272
+1651628977635	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1651628983709	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1651628983975	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1651628985148	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1651628992173	Marionette	INFO	Stopped listening on port 56272
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1651629315593	geckodriver	INFO	Listening on 127.0.0.1:50052
+1651629318648	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "start-maximized" "--remote-debugging-port" "50053" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\jaram\\AppData\\Local\\Temp\\rust_mozprofileyYUgeX"
+1651629319409	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\jaram\\AppData\\Local\\Temp\\rust_mozprofileyYUgeX\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:50053/devtools/browser/4a5afafb-0e5b-4f4a-b0b1-4f8a72597b5e
+1651629322785	Marionette	INFO	Listening on port 50079
+Read port: 50079
+1651629322886	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1651629327013	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1651629328533	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1651629359863	Marionette	INFO	Stopped listening on port 50079
+1651629364646	geckodriver	INFO	Listening on 127.0.0.1:50125
+1651629367693	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "start-maximized" "--remote-debugging-port" "50126" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\jaram\\AppData\\Local\\Temp\\rust_mozprofileccp80M"
+1651629368166	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\jaram\\AppData\\Local\\Temp\\rust_mozprofileccp80M\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:50126/devtools/browser/82253d95-679c-468a-8227-ef38a7999ce7
+1651629371029	Marionette	INFO	Listening on port 50150
+Read port: 50150
+1651629371096	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1651629375402	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1651629376562	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1651629382646	Marionette	INFO	Stopped listening on port 50150
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1651629390292	geckodriver	INFO	Listening on 127.0.0.1:50200
+1651629393350	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "start-maximized" "--remote-debugging-port" "50201" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\jaram\\AppData\\Local\\Temp\\rust_mozprofileQsfMzN"
+1651629393744	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\jaram\\AppData\\Local\\Temp\\rust_mozprofileQsfMzN\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:50201/devtools/browser/f38167de-2072-4f72-a588-7711ed4a4d9e
+1651629395828	Marionette	INFO	Listening on port 50225
+Read port: 50225
+1651629395868	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1651629400284	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1651629401560	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1651629402753	Marionette	INFO	Stopped listening on port 50225
+console.warn: TopSitesFeed: Contile endpoint returned unexpected status: 403
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1651629414648	geckodriver	INFO	Listening on 127.0.0.1:50263
+1651629417694	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50264" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\jaram\\AppData\\Local\\Temp\\rust_mozprofileg9geyo"
+1651629418243	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\jaram\\AppData\\Local\\Temp\\rust_mozprofileg9geyo\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:50264/devtools/browser/7a99eef3-169e-4895-bbff-ea73a0134399
+1651629421104	Marionette	INFO	Listening on port 50289
+Read port: 50289
+1651629421173	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1651629430363	Marionette	INFO	Stopped listening on port 50289
+1651630011032	geckodriver	INFO	Listening on 127.0.0.1:50408
+1651630014107	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50409" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\jaram\\AppData\\Local\\Temp\\rust_mozprofile9VJaIW"
+1651630014705	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\jaram\\AppData\\Local\\Temp\\rust_mozprofile9VJaIW\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:50409/devtools/browser/2b2ff7d0-1a91-4d50-9e5b-02c6e093023c
+1651630017896	Marionette	INFO	Listening on port 50434
+Read port: 50434
+1651630017996	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://consultas.funcionjudicial.gob.ec"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://consultas.funcionjudicial.gob.ec"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://consultas.funcionjudicial.gob.ec"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://consultas.funcionjudicial.gob.ec"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://consultas.funcionjudicial.gob.ec"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://consultas.funcionjudicial.gob.ec"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://consultas.funcionjudicial.gob.ec"
+1651630042223	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://consultas.funcionjudicial.gob.ec"
+1651630044796	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://consultas.funcionjudicial.gob.ec"
+1651630047387	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1651630050000	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1651630052595	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1651630055211	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1651630057822	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1651630060345	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1651630062877	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://consultas.funcionjudicial.gob.ec"
+1651630065414	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://consultas.funcionjudicial.gob.ec"
+1651630067984	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://consultas.funcionjudicial.gob.ec"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://consultas.funcionjudicial.gob.ec"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://consultas.funcionjudicial.gob.ec"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://consultas.funcionjudicial.gob.ec"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://consultas.funcionjudicial.gob.ec"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://consultas.funcionjudicial.gob.ec"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://consultas.funcionjudicial.gob.ec"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://consultas.funcionjudicial.gob.ec"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://consultas.funcionjudicial.gob.ec"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://consultas.funcionjudicial.gob.ec"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://consultas.funcionjudicial.gob.ec"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://consultas.funcionjudicial.gob.ec"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://consultas.funcionjudicial.gob.ec"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://consultas.funcionjudicial.gob.ec"
+1651630120195	Marionette	INFO	Stopped listening on port 50434
+1651630121447	geckodriver	INFO	Listening on 127.0.0.1:50489
+1651630124458	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50490" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\jaram\\AppData\\Local\\Temp\\rust_mozprofileeWhQDk"
+1651630124993	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\jaram\\AppData\\Local\\Temp\\rust_mozprofileeWhQDk\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:50490/devtools/browser/ded6218e-f619-4b8c-ad06-08ea84e0d557
+1651630128132	Marionette	INFO	Listening on port 50516
+Read port: 50516
+1651630128171	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://consultas.funcionjudicial.gob.ec"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://consultas.funcionjudicial.gob.ec"
+1651630133509	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1651630141583	Marionette	INFO	Stopped listening on port 50516
+1651630142562	geckodriver	INFO	Listening on 127.0.0.1:50551
+1651630145609	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50552" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\jaram\\AppData\\Local\\Temp\\rust_mozprofilechXXNk"
+1651630146177	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\jaram\\AppData\\Local\\Temp\\rust_mozprofilechXXNk\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:50552/devtools/browser/53ff2bbf-60f8-4708-adb4-bb38d5f9ce46
+1651630150002	Marionette	INFO	Listening on port 50606
+Read port: 50606
+1651630150111	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE

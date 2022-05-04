@@ -6,7 +6,15 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 
-def scrap_juicios(driver, dependencia, year, secuencial, url, delay = 1):
+def ingresar(element, espero):
+    try:
+        element.click()
+    except:
+        time.sleep(espero)
+        element.click()
+
+
+def scrap_juicios(driver, dependencia, year, secuencial, delay=1, waits=20):
     """
     Scraper for judicial trials, using driver. 
     The function returs a tupple ```results``` which contains generaliteis of the case and 
@@ -14,13 +22,15 @@ def scrap_juicios(driver, dependencia, year, secuencial, url, delay = 1):
     """
 
     # Define waits
-    wait = WebDriverWait(driver, 10)
+    wait = WebDriverWait(driver, waits)
+    esperar = delay*3
 
     # Send a query to the main page
+    time.sleep(delay)
     wait.until(EC.presence_of_element_located((By.ID, 'form1:idJuicioJudicatura'))).send_keys(dependencia)
     driver.find_element(By.ID, 'form1:idJuicioAnio').send_keys(year)
     driver.find_element(By.ID, 'form1:idJuicioNumero').send_keys(secuencial)
-    driver.find_element(By.ID, 'form1:butBuscarJuicios').click()
+    ingresar(driver.find_element(By.ID, 'form1:butBuscarJuicios'), esperar)
     time.sleep(delay)
 
     # See if the process exists
@@ -40,7 +50,7 @@ def scrap_juicios(driver, dependencia, year, secuencial, url, delay = 1):
     
         else:
             # Open process
-            driver.find_element(By.ID, proceso.button['name']).click()
+            ingresar(driver.find_element(By.ID, proceso.button['id']), esperar)
             time.sleep(delay)
 
             # Loop over each instance
@@ -50,7 +60,7 @@ def scrap_juicios(driver, dependencia, year, secuencial, url, delay = 1):
             for tr in instancias.find_all('tr', class_='ui-widget-content'):
                 
                 # Open instance
-                driver.find_element(By.ID, tr.button['name']).click()
+                ingresar(driver.find_element(By.ID, tr.button['id']), esperar)
                 time.sleep(delay)
                 
                 # Get instance page source 
@@ -90,7 +100,7 @@ def scrap_juicios(driver, dependencia, year, secuencial, url, delay = 1):
                 # Si tiene varias paginas, loop sobre todas
                 else:
                     npag = len(pg.find('span', class_='ui-paginator-pages'))
-                    driver.find_element(By.CSS_SELECTOR, "a.ui-paginator-page:nth-child(1)").click()
+                    ingresar(driver.find_element(By.CSS_SELECTOR, "a.ui-paginator-page:nth-child(1)"), esperar)
                     time.sleep(delay)
 
                     for j in range(npag):
@@ -113,21 +123,21 @@ def scrap_juicios(driver, dependencia, year, secuencial, url, delay = 1):
                                     caract.update({'resolucion': (tr_actos.div.text).lstrip('\n').rstrip('\n')})
 
                         # Change page
-                        driver.find_element(By.CSS_SELECTOR, '.ui-icon-seek-next').click()
+                        ingresar(driver.find_element(By.CSS_SELECTOR, '.ui-icon-seek-next'), esperar)
                         time.sleep(delay)
                 
                 # Add unique instancia a resultado
                 caracteristicas.append(caract)
 
                 # Regresar
-                driver.find_element(By.XPATH, '/html/body/div[1]/div[4]/div/div/div[1]/div[1]/a').click()
+                ingresar(driver.find_element(By.XPATH, '/html/body/div[1]/div[4]/div/div/div[1]/div[1]/a'), esperar)
                 time.sleep(delay)
 
             # Return to procesos page
-            driver.find_element(By.XPATH, '//*[@id="formJuicioDialogo:btnCancelar"]').click()
+            ingresar(driver.find_element(By.XPATH, '//*[@id="formJuicioDialogo:btnCancelar"]'), esperar)
             time.sleep(delay)
 
     # Click en boton limpiar
-    driver.find_element(By.XPATH, '//*[@id="form1:butLimpiar"]').click()
+    ingresar(driver.find_element(By.XPATH, '//*[@id="form1:butLimpiar"]'), esperar)
 
     return caracteristicas

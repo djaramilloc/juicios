@@ -23,10 +23,13 @@ def scrap_juicios(driver, dependencia, year, secuencial, delay=1, waits=20):
 
     # Define waits
     wait = WebDriverWait(driver, waits)
-    esperar = delay*3
+    esperar = delay*5
+
+    # Clean session
+    wait.until(EC.presence_of_element_located((By.XPATH, '//*[@id="form1:butLimpiar"]'))).click()
+    time.sleep(delay)
 
     # Send a query to the main page
-    time.sleep(delay)
     wait.until(EC.presence_of_element_located((By.ID, 'form1:idJuicioJudicatura'))).send_keys(dependencia)
     driver.find_element(By.ID, 'form1:idJuicioAnio').send_keys(year)
     driver.find_element(By.ID, 'form1:idJuicioNumero').send_keys(secuencial)
@@ -136,8 +139,5 @@ def scrap_juicios(driver, dependencia, year, secuencial, delay=1, waits=20):
             # Return to procesos page
             ingresar(driver.find_element(By.XPATH, '//*[@id="formJuicioDialogo:btnCancelar"]'), esperar)
             time.sleep(delay)
-
-    # Click en boton limpiar
-    ingresar(driver.find_element(By.XPATH, '//*[@id="form1:butLimpiar"]'), esperar)
 
     return caracteristicas

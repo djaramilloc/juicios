@@ -1,6 +1,8 @@
 import time
 from bs4 import BeautifulSoup
 
+from selenium.common.exceptions import ElementNotInteractableException
+from selenium.common.exceptions import ElementClickInterceptedException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -9,9 +11,49 @@ from selenium.webdriver.support import expected_conditions as EC
 def ingresar(element, espero):
     try:
         element.click()
+    except (ElementClickInterceptedException, ElementNotInteractableException):
+        try:
+            time.sleep(espero)
+            element.click()
+        except (ElementClickInterceptedException, ElementNotInteractableException) as exp:
+            raise exp
+
+
+def scrap_dependencias(driver, depnumber:str, secuencial='00001', year='2021', delay=1, waits=20):
+    """
+    Obtain the name of a dependencia judicial, based on ```depnumber```
+    """
+
+    # Define waits
+    wait = WebDriverWait(driver, waits)
+    esperar = delay*10
+
+    # Clean session
+    wait.until(EC.presence_of_element_located((By.XPATH, '//*[@id="form1:butLimpiar"]'))).click()
+    time.sleep(delay)
+
+    # Send codes
+    driver.find_element(By.ID, 'form1:idJuicioJudicatura').send_keys(depnumber)
+    driver.find_element(By.ID, 'form1:idJuicioAnio').send_keys(year)
+    driver.find_element(By.ID, 'form1:idJuicioNumero').send_keys(secuencial)
+    ingresar(driver.find_element(By.ID, 'form1:butBuscarJuicios'), esperar)
+    time.sleep(delay)
+
+    try:
+        # Enter to the first proceso
+        ingresar(driver.find_element(By.ID, 'form1:dataTableJuicios2:0:btnAbrirMovimientos'), esperar)
+        time.sleep(delay)
+
+        # Obtain text of dependencia
+        soup = BeautifulSoup(driver.page_source, 'lxml')
+        res = soup.find('td', class_='ui-datatable-subtable-header').text
+        
+        ingresar(driver.find_element(By.ID, 'formJuicioDialogo:btnCancelar'), esperar)
+        time.sleep(delay)
+        return res.rstrip('\n').lstrip('\n')
+    
     except:
-        time.sleep(espero)
-        element.click()
+        return False
 
 
 def scrap_juicios(driver, dependencia, year, secuencial, delay=1, waits=20):
@@ -23,7 +65,7 @@ def scrap_juicios(driver, dependencia, year, secuencial, delay=1, waits=20):
 
     # Define waits
     wait = WebDriverWait(driver, waits)
-    esperar = delay*5
+    esperar = delay*10
 
     # Clean session
     wait.until(EC.presence_of_element_located((By.XPATH, '//*[@id="form1:butLimpiar"]'))).click()

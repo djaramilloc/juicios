@@ -30,28 +30,30 @@ db_depen['id_dependencia'] = (db_depen['id_dependencia']
 guayas = list(db_depen.loc[db_depen['id_dependencia'].apply(lambda x: x.startswith('09')), 'id_dependencia'])
 pichincha = list(db_depen.loc[db_depen['id_dependencia'].apply(lambda x: x.startswith('17')), 'id_dependencia'])
 
-# Loop over judicaturas 
-for depnumber in guayas:
+num = 17
+depnumber = guayas[num]
 
-    # Create file
-    try:
-        df_start = pd.read_excel(db/f'data/proc/delitos_web/delitos_{depnumber}.xls')
-    except FileNotFoundError:
-        df_start = pd.DataFrame()
+print(f'Running {depnumber} ({num})')
 
-    # First attempt
-    res = obtener_datos(df_start, depnumber, delitos, ventana=False)
-    df_procesos = pd.concat([df_start, res['df']], ignore_index=True).copy()
-    df_procesos.to_excel(db/f'data/proc/delitos_web/delitos_{depnumber}.xls', index=False)
+# Create file
+try:
+    df_start = pd.read_excel(db/f'proc/delitos_web/delitos_{depnumber}.xls')
+except FileNotFoundError:
+    df_start = pd.DataFrame()
 
-    # Loop while false
-    while res['estado'] == False:
-        res = obtener_datos(df_procesos, depnumber)
-        df_procesos = pd.concat([df_procesos, res['df']], ignore_index=True).copy()
-        df_procesos.to_excel(db/f'data/proc/delitos_web/delitos_{depnumber}.xls', index=False)
+# First attempt
+res = obtener_datos(df_start, depnumber, delitos, ventana=False, delay=3)
+df_procesos = pd.concat([df_start, res['df']], ignore_index=True).copy()
+df_procesos.to_excel(db/f'proc/delitos_web/delitos_{depnumber}.xls', index=False)
 
-    # Save if true
-    else:
-        df_procesos = pd.concat([df_procesos, res['df']], ignore_index=True).copy()
-        df_procesos.to_excel(db/f'data/proc/delitos_web/delitos_{depnumber}.xls', index=False)
-        print(f'Finally!!! {depnumber}')
+# Loop while false
+while res['estado'] == False:
+    res = obtener_datos(df_procesos, depnumber, delitos, ventana=False, delay=3)
+    df_procesos = pd.concat([df_procesos, res['df']], ignore_index=True).copy()
+    df_procesos.to_excel(db/f'proc/delitos_web/delitos_{depnumber}.xls', index=False)
+
+# Save if true
+else:
+    df_procesos = pd.concat([df_procesos, res['df']], ignore_index=True).copy()
+    df_procesos.to_excel(db/f'proc/delitos_web/delitos_{depnumber}.xls', index=False)
+    print(f'Finally!!! {depnumber}')

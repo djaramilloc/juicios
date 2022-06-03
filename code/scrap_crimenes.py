@@ -66,9 +66,9 @@ def scrap_crimenes(driver, dependencia:str, year:str, secuencial:str, crimenes:l
 
 
         elif proceso.find_all('td')[3].text not in crimenes:
-            caract = {'id_proceso': proceso.find_all('td')[2].text}
+            caract = {'id_proceso': proceso.find_all('td')[2].text.replace('-', '')}
             caract.update({'causa': proceso.find_all('td')[3].text})
-            return [caract]
+            caracteristicas.append(caract) 
 
         else:
             # Open process
@@ -152,7 +152,7 @@ def scrap_crimenes(driver, dependencia:str, year:str, secuencial:str, crimenes:l
                 caracteristicas.append(caract)
 
                 # Regresar
-                ingresar(driver.find_element(By.XPATH, '/html/body/div[1]/div[4]/div/div/div[1]/div[1]/a'), esperar)
+                ingresar(driver.find_element(By.ID, 'formJuicioDetalle:btnCerrar'), esperar)
                 time.sleep(delay)
 
             # Return to procesos page
@@ -162,7 +162,7 @@ def scrap_crimenes(driver, dependencia:str, year:str, secuencial:str, crimenes:l
     return caracteristicas
 
 # Function to extract data from a single process
-def juicios(driver, dep_judicial, year, n_attempt, list_crimenes):
+def juicios(driver, dep_judicial, year, n_attempt, list_crimenes, delay=2):
     """
     La funcion juicios llama al webscraper y da como resultado un data frame
     que contiene todos los resultados de los juicios 
@@ -172,7 +172,7 @@ def juicios(driver, dep_judicial, year, n_attempt, list_crimenes):
     id_proceso = (5-len(str(n_attempt)))*'0' + str(n_attempt)
 
     # Call function to webscrap
-    result_list = scrap_crimenes(driver, dep_judicial, year, id_proceso, list_crimenes, delay=2)
+    result_list = scrap_crimenes(driver, dep_judicial, year, id_proceso, list_crimenes, delay=delay)
 
     # Convert results to pandas
     result_df = pd.DataFrame()
@@ -182,7 +182,7 @@ def juicios(driver, dep_judicial, year, n_attempt, list_crimenes):
     return result_df
 
 # Function to iterate over
-def obtener_datos(dflistos, iddep, list_crimenes, ventana=True):
+def obtener_datos(dflistos, iddep, list_crimenes, ventana=True, delay=2):
     """
     La funcion toma como argumento un dataframe ```dflistos``` para la
     dependencia judicial ```iddep```. Calcula el ultimo numero de proceso en el
@@ -202,7 +202,7 @@ def obtener_datos(dflistos, iddep, list_crimenes, ventana=True):
         num_last = 1
 
     else:
-        last_proceso = dflistos['id_proceso'][dflistos.shape[0]-1] 
+        last_proceso = str(dflistos['id_proceso'][dflistos.shape[0]-1])
         yr_last = int(last_proceso[5:9])
         num_last = int(re.sub('\D', '', last_proceso[9:])) + 1
 
@@ -212,7 +212,7 @@ def obtener_datos(dflistos, iddep, list_crimenes, ventana=True):
     options = webdriver.FirefoxOptions()
     options.headless = ventana # do not show browser window
     options.page_load_strategy = 'none' # Dont wait page to be loaded
-    options.set_preference("general.useragent.override", UserAgent().random)
+    #options.set_preference("general.useragent.override", UserAgent().random)
 
     # Start Driver
     gecko_path = Path.home()/'Documents/geckodriver.exe'
@@ -233,22 +233,23 @@ def obtener_datos(dflistos, iddep, list_crimenes, ventana=True):
         for n_attempt in range(n_start, 99999+1):
             try:
                 # Scrap the data
-                results_df = juicios(driver, iddep, str(year), n_attempt, list_crimenes)
+                results_df = juicios(driver, iddep, str(year), n_attempt, list_crimenes, delay)
                 
                 # Check if id_proceso existe
                 if 'No existe este proceso' in results_df.causa[0]:
                     nfallidos +=1
 
-                    if nfallidos >=5: 
+                    if nfallidos >=10:
+                        results = pd.concat([results, results_df], ignore_index=True) 
                         break
 
                 else:
                     results = pd.concat([results, results_df], ignore_index=True)
 
-            except (TypeError, ElementNotInteractableException, StaleElementReferenceException):
+            except:
                 # If we cannot get the data, return the result up to that point
                 driver.close()
-                print('El proceso se interrumpio, seguir corriendo')
+                print(f'El proceso se interrumpio. {iddep+str(year)+str(n_attempt)}')
                 return {'estado': False, 'df': results}
                 
     # If all works good

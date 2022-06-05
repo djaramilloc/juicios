@@ -255,3 +255,136 @@ def obtener_datos(dflistos, iddep, list_crimenes, ventana=True, delay=2):
     # If all works good
     driver.close()
     return {'estado': True, 'df': results}
+
+# Funcion para extraer solo nombre de los procesos
+def tabla_nombre_delitos(iddep:str, year:str, secuencial:str, driver, delay=1, waits=20):
+    """
+    Returns tabla of name of delitos with a given driver
+
+    Output: a dataframe with the delitos
+    """
+
+    # Define waits
+    wait = WebDriverWait(driver, waits)
+    esperar = delay*10
+
+    # Clean session
+    wait.until(EC.presence_of_element_located((By.XPATH, '//*[@id="form1:butLimpiar"]'))).click()
+    time.sleep(delay)
+
+    # Send a query to the main page
+    wait.until(EC.presence_of_element_located((By.ID, 'form1:idJuicioJudicatura'))).send_keys(iddep)
+    driver.find_element(By.ID, 'form1:idJuicioAnio').send_keys(year)
+    driver.find_element(By.ID, 'form1:idJuicioNumero').send_keys(secuencial)
+    ingresar(driver.find_element(By.ID, 'form1:butBuscarJuicios'), esperar)
+    time.sleep(delay)
+
+    # Get data
+    soup = BeautifulSoup(driver.page_source, 'lxml')
+    r = soup.find('tbody', id='form1:dataTableJuicios2_data')
+
+    # Obtain results
+    if 'No se encuentran' in r.text:
+        resultsdf = pd.DataFrame([r.text], columns=['descripcion'])
+        resultsdf['causa'] = iddep + year + secuencial
+
+        return resultsdf
+    
+    else:
+
+        # Save results in a list
+        res = []
+
+        # Loop over items
+        for proc in r.contents:
+
+            tx = proc.text.split('\n', 1)[0]
+            tx = tx.rstrip(' ')
+            res.append(tx)
+
+
+        # Convert results to pandas
+        result_df = pd.DataFrame()
+        for instancia in res:
+            result_df = pd.concat([result_df, pd.DataFrame(instancia, columns=['descripcion'])], ignore_index=True)
+            result_df['causa'] = iddep + year + secuencial
+
+        return result_df
+
+
+def obtener_infraccion(dflistos, iddep:str, ventana=True, delay=2):
+    """
+    La funcion toma como argumento un dataframe ```dflistos``` para la
+    dependencia judicial ```iddep```. Calcula el ultimo numero de proceso en el
+    dataframe, y llama a la funcion de juicios para obtener los datos El
+    resultado es un diccionario, en el cual el primer elemento es ul estado =
+    {True, False} que define si se acabo ya con todos los procesos de una
+    dependencia. Y el segundo elemento es el dataframe con el texto de cada
+    proceso
+
+    ventana: Si hago aparecer el browser 
+    """
+
+    # 1 - Figure out last id of proceso: If it is the first iteration, start from 2014, and 1
+    if dflistos.shape[0] == 0:
+        year0 = 2010
+        sec0 = 0
+
+    else:
+        last_proceso = dflistos['causa'][-1].replace(' ', '')
+        year0 = int(last_proceso[5:9])
+        sec0 = int(last_proceso[-4:])
+
+    # 2 - Run Webscraper
+
+    # Define options for browser
+    options = webdriver.FirefoxOptions()
+    options.headless = ventana # True= do not show browser window
+    options.page_load_strategy = 'none' # Dont wait page to be loaded
+    #options.set_preference("general.useragent.override", UserAgent().random)
+
+    # Start Driver
+    gecko_path = Path.home()/'Documents/geckodriver.exe'
+    driver = webdriver.Firefox(executable_path=gecko_path, options=options)
+    url = 'http://consultas.funcionjudicial.gob.ec/informacionjudicial/public/informacion.jsf'
+    driver.get(url)
+
+    # Define base for results
+    results = pd.DataFrame()
+
+    # Loop over years
+    for year in range(year0, 2014+1):
+
+        n_start = 1 if year > year0 else sec0
+
+        # Loop over possible trials
+        nfallidos = 0
+        for sec in range(n_start, 999+1):
+
+            # Convert to string
+            sec_str = "0"*(3 - len(str(sec))) + str(sec)
+            
+            try:
+                # Scrap the data
+                res_df = tabla_nombre_delitos(iddep, str(year), sec_str, driver)
+                
+                # Check if id_proceso existe
+                if 'No se encuentran' in res_df.descripcion[0]:
+                    nfallidos +=1
+
+                    if nfallidos >=3:
+                        results = pd.concat([results, res_df], ignore_index=True) 
+                        break
+
+                else:
+                    results = pd.concat([results, res_df], ignore_index=True)
+
+            except:
+                # If we cannot get the data, return the result up to that point
+                driver.close()
+                print(f'El proceso se interrumpio. {iddep + str(year) + sec_str}')
+                return {'estado': False, 'df': results}
+                
+    # If all works good
+    driver.close()
+    return {'estado': True, 'df': results}

@@ -4,7 +4,6 @@ from pyprojroot import here
 import sys
 import warnings
 
-
 # Definir paths
 root = here()
 raw = root/'data/raw'
@@ -17,7 +16,7 @@ from scrap_crimenes import obtener_infraccion
 
 
 # Load/create summary file
-process = 1
+process = 3
 faltan = True
 
 while faltan == True:
@@ -41,7 +40,7 @@ while faltan == True:
         # Create file
         try:
             df_start = pd.read_csv(proc/f'resumenes/by_judicatura/nombres_{depnumber}.csv')
-        except FileNotFoundError:
+        except (FileNotFoundError, pd.errors.EmptyDataError):
             df_start = pd.DataFrame()
 
         # First attempt
@@ -64,6 +63,6 @@ while faltan == True:
             faltantes.loc[0, 'estado'] = 'listo'
             (pd
             .concat([listos, faltantes], ignore_index=True)
-            .to_csv(proc/f'resumenes/resumen_10_14_{process}.csv'))
+            .to_csv(proc/f'resumenes/resumen_10_14_{process}.csv', index=False))
 
             print(f'Finally!!! {depnumber}')

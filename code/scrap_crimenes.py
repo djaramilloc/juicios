@@ -306,7 +306,8 @@ def tabla_nombre_delitos(iddep:str, year:str, secuencial:str, driver, delay=1, w
         # Convert results to pandas
         result_df = pd.DataFrame()
         for instancia in res:
-            result_df = pd.concat([result_df, pd.DataFrame(instancia, columns=['descripcion'])], ignore_index=True)
+            ins_df = pd.DataFrame([instancia], columns=['descripcion'])
+            result_df = pd.concat([result_df, ins_df], ignore_index=True)
             result_df['causa'] = iddep + year + secuencial
 
         return result_df
@@ -331,9 +332,9 @@ def obtener_infraccion(dflistos, iddep:str, ventana=True, delay=2):
         sec0 = 0
 
     else:
-        last_proceso = dflistos['causa'][-1].replace(' ', '')
-        year0 = int(last_proceso[5:9])
-        sec0 = int(last_proceso[-4:])
+        last_proceso = str(dflistos['causa'][dflistos.shape[0]-1])
+        year0 = int(last_proceso[4:8])
+        sec0 = int(last_proceso[-3:])
 
     # 2 - Run Webscraper
 
@@ -366,7 +367,7 @@ def obtener_infraccion(dflistos, iddep:str, ventana=True, delay=2):
             
             try:
                 # Scrap the data
-                res_df = tabla_nombre_delitos(iddep, str(year), sec_str, driver)
+                res_df = tabla_nombre_delitos(iddep, str(year), sec_str, driver, delay)
                 
                 # Check if id_proceso existe
                 if 'No se encuentran' in res_df.descripcion[0]:
@@ -379,7 +380,7 @@ def obtener_infraccion(dflistos, iddep:str, ventana=True, delay=2):
                 else:
                     results = pd.concat([results, res_df], ignore_index=True)
 
-            except:
+            except ElementNotInteractableException:
                 # If we cannot get the data, return the result up to that point
                 driver.close()
                 print(f'El proceso se interrumpio. {iddep + str(year) + sec_str}')

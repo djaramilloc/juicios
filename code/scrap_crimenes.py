@@ -333,8 +333,13 @@ def obtener_infraccion(dflistos, iddep:str, ventana=True, delay=2):
 
     else:
         last_proceso = str(dflistos['causa'][dflistos.shape[0]-1])
-        year0 = int(last_proceso[4:8])
+
+        if len(last_proceso) == 11:
+            last_proceso = "0"+last_proceso
+        
+        year0 = int(last_proceso[5:9])
         sec0 = int(last_proceso[-3:])
+        
 
     # 2 - Run Webscraper
 

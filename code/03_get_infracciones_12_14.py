@@ -16,7 +16,7 @@ from scrap_crimenes import obtener_infraccion
 
 
 # Load/create summary file
-process = 3
+process = 2
 faltan = True
 
 while faltan == True:
@@ -35,7 +35,7 @@ while faltan == True:
         depnumber = "0"*(5 - len(str(depnumber))) + str(depnumber)
 
         # Run file
-        print(f'Running {depnumber}')
+        print(f'Running {depnumber} {process}')
 
         # Create file
         try:
@@ -45,7 +45,7 @@ while faltan == True:
 
         # First attempt
         res = obtener_infraccion(df_start, depnumber, ventana=False, delay=2)
-        df_procesos = pd.concat([df_start, res['df']], ignore_index=True).copy()
+        df_procesos = pd.concat([df_start, res['df']], ignore_index=True)
         df_procesos.to_csv(proc/f'resumenes/by_judicatura/nombres_{depnumber}.csv', index=False)
 
         # Loop while false

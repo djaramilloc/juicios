@@ -385,7 +385,7 @@ def obtener_infraccion(dflistos, iddep:str, ventana=True, delay=2):
                 else:
                     results = pd.concat([results, res_df], ignore_index=True)
 
-            except ElementNotInteractableException:
+            except (ElementNotInteractableException, ElementClickInterceptedException):
                 # If we cannot get the data, return the result up to that point
                 driver.close()
                 print(f'El proceso se interrumpio. {iddep + str(year) + sec_str}')

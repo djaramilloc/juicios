@@ -16,7 +16,7 @@ from scrap_crimenes import obtener_infraccion
 
 
 # Load/create summary file
-process = 2
+process = 3
 # python code/03_get_infracciones_12_14.py
 faltan = True
 

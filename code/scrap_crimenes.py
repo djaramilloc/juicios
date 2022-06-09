@@ -1,6 +1,7 @@
 import pandas as pd
 from pathlib import Path
 import re
+import difflib
 
 import time
 from selenium import webdriver
@@ -31,7 +32,8 @@ def scrap_crimenes(driver, dependencia:str, year:str, secuencial:str, crimenes:l
     """
     Scraper for judicial trials, using driver. 
     The function returs a tupple ```results``` which contains generaliteis of the case and 
-    the text of sentencia and acta de sorteo
+    the text of sentencia and acta de sorteo.
+    the output is a list with all the relevant information
     """
 
     # Define waits
@@ -64,100 +66,112 @@ def scrap_crimenes(driver, dependencia:str, year:str, secuencial:str, crimenes:l
             caract.update({'causa': 'No existe este proceso'})
             return [caract]
 
-
-        elif proceso.find_all('td')[3].text not in crimenes:
-            caract = {'id_proceso': proceso.find_all('td')[2].text.replace('-', '')}
-            caract.update({'causa': proceso.find_all('td')[3].text})
-            caracteristicas.append(caract) 
-
         else:
-            # Open process
-            ingresar(driver.find_element(By.ID, proceso.button['id']), esperar)
-            time.sleep(delay)
+            # Get infraccion name
+            infraccion = proceso.find_all('td')[3].text.rstrip(' ')
+            in_delitos = difflib.get_close_matches(infraccion, crimenes, n=1, cutoff=0.65)
 
-            # Loop over each instance
-            page = BeautifulSoup(driver.page_source, 'lxml')
-            instancias = page.find('tbody', id='formJuicioDialogo:dataTableMovimiento_data')
-            
-            for tr in instancias.find_all('tr', class_='ui-widget-content'):
-                
-                # Open instance
-                ingresar(driver.find_element(By.ID, tr.button['id']), esperar)
+            # Si el proceso no es crimen obtener diccionario
+            if len(in_delitos) == 0:
+                caract = {'id_proceso': proceso.find_all('td')[2].text.replace('-', '')}
+                caract.update({'causa': infraccion})
+                caracteristicas.append(caract)
+
+            else:
+                # Open process
+                ingresar(driver.find_element(By.ID, proceso.button['id']), esperar)
                 time.sleep(delay)
+
+                # Loop over each instance
+                page = BeautifulSoup(driver.page_source, 'lxml')
+                instancias = page.find('tbody', id='formJuicioDialogo:dataTableMovimiento_data')
                 
-                # Get instance page source 
-                pg = BeautifulSoup(driver.page_source, 'lxml')
+                trs = instancias.find_all('tr', class_='ui-widget-content')
 
-                # Get Generalities about the case
-                caract = {}
-                general = pg.find('table', id='formJuicioDetalle:j_idt73').tbody
-                for index, tr in enumerate(general):
-                    td = tr.find_all('td', class_='ui-panelgrid-cell descripcion')
-                    if index == 0:
-                        caract.update({'id_proceso': td[0].text})
-                    elif index == 1:
-                        caract.update({'causa': td[1].text})
-                    elif index == 2:
-                        caract.update({'demandante': td[0].text})
-                        caract.update({'demandado': td[1].text})
-
-                #Si tiene solo una pagina
-                if pg.find('span', class_='ui-paginator-pages') is None:
-                    
-                    actos = pg.find('tbody', id='formJuicioDetalle:dataTable_data')
-                    for tr_actos in actos.find_all('tr'):
-                        if tr_actos.legend is not None:
-                            if ('SORTEO' in tr_actos.legend.text) & ('PERITO' not in tr_actos.legend.text):
-                                caract.update({'fecha_sorteo': tr_actos.td.text})
-                                caract.update({'sorteo': (tr_actos.div.text).lstrip('\n').rstrip('\n')})
-
-                            elif 'SENTENCIA' in tr_actos.legend.text:
-                                caract.update({'fecha_sentencia': tr_actos.td.text})
-                                caract.update({'sentencia': (tr_actos.div.text).lstrip('\n').rstrip('\n')})
-
-                            elif 'RESOLUC' in tr_actos.legend.text:
-                                caract.update({'fecha_resolucion': tr_actos.td.text})
-                                caract.update({'resolucion': (tr_actos.div.text).lstrip('\n').rstrip('\n')})
-
-                # Si tiene varias paginas, loop sobre todas
-                else:
-                    npag = len(pg.find('span', class_='ui-paginator-pages'))
-                    ingresar(driver.find_element(By.CSS_SELECTOR, "a.ui-paginator-page:nth-child(1)"), esperar)
+                for tr in trs:
+                    # Open instance
+                    ingresar(driver.find_element(By.ID, tr.button['id']), esperar)
                     time.sleep(delay)
+                 
+                    # Get instance page source
+                    pg = BeautifulSoup(driver.page_source, 'lxml')
+                    general = pg.find('table', id=re.compile('formJuicioDetalle:j_idt(\d+)')).tbody
 
-                    for j in range(npag):
-                        # Get text of sorteo y sentencia
-                        pg = BeautifulSoup(driver.page_source, 'lxml')
-                        actos = pg.find('tbody', id='formJuicioDetalle:dataTable_data')
+                    # Get Generalities about the case
+                    caract = {}
+                    for index, tr in enumerate(general):
+                        td = tr.find_all('td', class_='ui-panelgrid-cell descripcion')
+                        if index == 0:
+                            caract.update({'id_proceso': td[0].text.rstrip(' ')})
+                        elif index == 1:
+                            caract.update({'causa': td[1].text.rstrip(' ')})
+                        elif index == 2:
+                            caract.update({'demandante': td[0].text.rstrip(' ')})
+                            caract.update({'demandado': td[1].text.rstrip(' ')})
+
+                    #Si tiene solo una pagina
+                    if pg.find('span', class_='ui-paginator-pages') is None:
                         
+                        actos = pg.find('tbody', id='formJuicioDetalle:dataTable_data')
                         for tr_actos in actos.find_all('tr'):
                             if tr_actos.legend is not None:
                                 if ('SORTEO' in tr_actos.legend.text) & ('PERITO' not in tr_actos.legend.text):
-                                    caract.update({'fecha_sorteo': tr_actos.td.text})
-                                    caract.update({'sorteo': (tr_actos.div.text).lstrip('\n').rstrip('\n')})
-                                
+                                    leyenda = tr_actos.legend.text.rstrip(' ')
+                                    leyenda = leyenda + "_" + tr_actos.td.text
+                                    caract.update({leyenda: (tr_actos.div.text).lstrip('\n').rstrip('\n')})
+
                                 elif 'SENTENCIA' in tr_actos.legend.text:
-                                    caract.update({'fecha_sentencia': tr_actos.td.text})
-                                    caract.update({'sentencia': (tr_actos.div.text).lstrip('\n').rstrip('\n')})
+                                    leyenda = tr_actos.legend.text.rstrip(' ')
+                                    leyenda = leyenda + "_" + tr_actos.td.text
+                                    caract.update({leyenda: (tr_actos.div.text).lstrip('\n').rstrip('\n')})
 
-                                elif 'RESOLUC' in tr_actos.legend.text:
-                                    caract.update({'fecha_resolucion': tr_actos.td.text})
-                                    caract.update({'resolucion': (tr_actos.div.text).lstrip('\n').rstrip('\n')})
-
-                        # Change page
-                        ingresar(driver.find_element(By.CSS_SELECTOR, '.ui-icon-seek-next'), esperar)
+                                elif 'ACTA RESUMEN' in tr_actos.legend.text:
+                                    leyenda = tr_actos.legend.text.rstrip(' ')
+                                    leyenda = leyenda + "_" + tr_actos.td.text
+                                    caract.update({leyenda: (tr_actos.div.text).lstrip('\n').rstrip('\n')})
+                    
+                    # Si tiene varias paginas, loop sobre todas
+                    else:
+                        npag = len(pg.find('span', class_='ui-paginator-pages'))
+                        ingresar(driver.find_element(By.CSS_SELECTOR, "a.ui-paginator-page:nth-child(1)"), esperar)
                         time.sleep(delay)
-                
-                # Add unique instancia a resultado
-                caracteristicas.append(caract)
 
-                # Regresar
-                ingresar(driver.find_element(By.ID, 'formJuicioDetalle:btnCerrar'), esperar)
+                        for j in range(npag):
+                            # Get text of sorteo y sentencia
+                            pg = BeautifulSoup(driver.page_source, 'lxml')
+                            actos = pg.find('tbody', id='formJuicioDetalle:dataTable_data')
+                            
+                            for tr_actos in actos.find_all('tr'):
+                                if tr_actos.legend is not None:
+                                    if ('SORTEO' in tr_actos.legend.text) & ('PERITO' not in tr_actos.legend.text):
+                                        leyenda = tr_actos.legend.text.rstrip(' ')
+                                        leyenda = leyenda + "_" + tr_actos.td.text
+                                        caract.update({leyenda: (tr_actos.div.text).lstrip('\n').rstrip('\n')})
+
+                                    elif 'SENTENCIA' in tr_actos.legend.text:
+                                        leyenda = tr_actos.legend.text.rstrip(' ')
+                                        leyenda = leyenda + "_" + tr_actos.td.text
+                                        caract.update({leyenda: (tr_actos.div.text).lstrip('\n').rstrip('\n')})
+
+                                    elif 'ACTA RESUMEN' in tr_actos.legend.text:
+                                        leyenda = tr_actos.legend.text.rstrip(' ')
+                                        leyenda = leyenda + "_" + tr_actos.td.text
+                                        caract.update({leyenda: (tr_actos.div.text).lstrip('\n').rstrip('\n')})
+
+                            # Change page
+                            ingresar(driver.find_element(By.CSS_SELECTOR, '.ui-icon-seek-next'), esperar)
+                            time.sleep(delay)
+                    
+                    # Add unique instancia a resultado
+                    caracteristicas.append(caract)
+
+                    # Regresar
+                    ingresar(driver.find_element(By.ID, 'formJuicioDetalle:btnCerrar'), esperar)
+                    time.sleep(delay)
+
+                # Return to procesos page
+                ingresar(driver.find_element(By.XPATH, '//*[@id="formJuicioDialogo:btnCancelar"]'), esperar)
                 time.sleep(delay)
-
-            # Return to procesos page
-            ingresar(driver.find_element(By.XPATH, '//*[@id="formJuicioDialogo:btnCancelar"]'), esperar)
-            time.sleep(delay)
 
     return caracteristicas
 
@@ -255,6 +269,110 @@ def obtener_datos(dflistos, iddep, list_crimenes, ventana=True, delay=2):
     # If all works good
     driver.close()
     return {'estado': True, 'df': results}
+
+# Obtener archivos
+def obtener_archivos(dflistos, iddep:str, list_crimenes:list, ventana=False, delay=2, y0=2015, ylast=2020):
+    """
+    La funcion toma como argumento un dataframe ```dflistos``` para la
+    dependencia judicial ```iddep```. Calcula el ultimo numero de proceso en el
+    dataframe, y llama a la funcion ```scrap crimenes``` para obtener los datos.
+
+    El outcome es un dictionario con 3 elementos:
+    1. ```estado```: True si todo el loop termino de correr
+    2. ```resumen_df```: pd.DataFrame que contiene el id_proceso, y el nombre de la infraccion
+    3. ```documentos```: diccionario con todos los documentos para cada id_proceso
+
+    Inputs:
+    ```y0```: Year to start looking. Default 2015
+    ```ylast```: Last year. Default 2020
+    """
+
+    # 1 - Figure out last id of proceso: If it is the first iteration, start from 2014, and 1
+    if dflistos.shape[0] == 0:
+        yr_start = y0
+        num_last = 1
+        ndigits = 4
+
+    else:
+        last_proceso = str(dflistos['id_proceso'][dflistos.shape[0]-1])
+        yrstr = last_proceso[5:9]
+        yr_start = int(yrstr)
+
+        secstr = last_proceso.split(yrstr)[1]
+        ndigits = len(re.sub('\D', '', secstr))
+        num_last = int(re.sub('\D', '', secstr)) + 1
+
+    # 2 - Run Webscraper
+
+    # Define options for browser
+    options = webdriver.FirefoxOptions()
+    options.headless = ventana # do not show browser window
+    options.page_load_strategy = 'none' # Dont wait page to be loaded
+    #options.set_preference("general.useragent.override", UserAgent().random)
+
+    # Start Driver
+    gecko_path = Path.home()/'Documents/geckodriver.exe'
+    driver = webdriver.Firefox(executable_path=gecko_path, options=options)
+    url = 'http://consultas.funcionjudicial.gob.ec/informacionjudicial/public/informacion.jsf'
+    driver.get(url)
+
+    # 3 - Loop over years and numeros
+    resumen = pd.DataFrame() # Empty data frame to store progress
+    documentos = {} # Empty dict to save documents downloaded
+
+    for year in range(yr_start, ylast + 1):
+        
+        n_start = 1 if year > yr_start else num_last
+
+        # The number of digits in secuencial depende del year
+        last_sec = int(ndigits*"9")
+
+        # Loop over possible trials
+        nfallidos = 0
+        for n_attempt in range(n_start, last_sec):
+            
+            # Move to secuencial str
+            sec_str = "0"*(ndigits - len(str(n_attempt))) + str(n_attempt)
+
+            # I'll try to catch any erros in the webscrap
+            try:
+
+                # Scrap the data
+                res_dict = scrap_crimenes(driver, iddep, str(year), sec_str, list_crimenes, delay=delay)
+
+                # Check if id_proceso existe
+                if 'No existe este proceso' in res_dict[0]['causa']:
+                    nfallidos +=1
+
+                    if nfallidos >=10:
+                        resumen = pd.concat([resumen, pd.DataFrame(res_dict, index=[0])], ignore_index=True) 
+                        break
+
+                else:
+                    for res in res_dict:
+                        
+                        # Split the dict between estado del caso y datos para guardar
+                        general_set = set(res.keys()).intersection({'id_proceso', 'causa', 'demandante', 'demandado'})
+                        general_dict = {key: [res[key]] for key in list(general_set)}
+                        docs_dict = res.copy()
+                        for key in ['causa', 'demandante', 'demandado']:
+                            docs_dict.pop(key, None)
+                        
+                        # Save resumen
+                        resumen=pd.concat([resumen, pd.DataFrame(general_dict)], ignore_index=True)
+
+                        # Save each docs, as dict of dicts
+                        documentos.update({res['id_proceso']: docs_dict})
+
+            except (ElementNotInteractableException, ElementClickInterceptedException, StaleElementReferenceException):
+                # If we cannot get the data, return the result up to that point
+                driver.close()
+                print(f'El proceso se interrumpio. {iddep+str(year)+str(n_attempt)}')
+                return {'estado': False, 'resumen_df': resumen, 'docs': documentos}
+
+    # If all works good
+    driver.close()
+    return {'estado': True, 'resumen_df': resumen, 'docs': documentos}
 
 # Funcion para extraer solo nombre de los procesos
 def tabla_nombre_delitos(iddep:str, year:str, secuencial:str, driver, delay=1, waits=20):

@@ -1,3 +1,4 @@
+from attr import Attribute
 import pandas as pd
 from pathlib import Path
 import re
@@ -20,11 +21,11 @@ from selenium.webdriver.support import expected_conditions as EC
 def ingresar(element, espero):
     try:
         element.click()
-    except (ElementClickInterceptedException, ElementNotInteractableException):
+    except (ElementClickInterceptedException, ElementNotInteractableException, StaleElementReferenceException):
         try:
             time.sleep(espero)
             element.click()
-        except (ElementClickInterceptedException, ElementNotInteractableException) as exp:
+        except (ElementClickInterceptedException, ElementNotInteractableException, StaleElementReferenceException) as exp:
             raise exp
 
 # Scraper
@@ -298,9 +299,13 @@ def obtener_archivos(dflistos, iddep:str, list_crimenes:list, ventana=False, del
         yrstr = last_proceso[5:9]
         yr_start = int(yrstr)
 
-        secstr = last_proceso.split(yrstr)[1]
-        ndigits = len(re.sub('\D', '', secstr))
+        secstr = last_proceso[9:]
         num_last = int(re.sub('\D', '', secstr)) + 1
+
+        # N digits
+        ndigits = dflistos['id_proceso'].apply(lambda x: len(re.sub('\D', '', str(x)[9:]))).max()
+
+        
 
     # 2 - Run Webscraper
 
@@ -364,7 +369,7 @@ def obtener_archivos(dflistos, iddep:str, list_crimenes:list, ventana=False, del
                         # Save each docs, as dict of dicts
                         documentos.update({res['id_proceso']: docs_dict})
 
-            except (ElementNotInteractableException, ElementClickInterceptedException, StaleElementReferenceException):
+            except (ElementNotInteractableException, ElementClickInterceptedException, StaleElementReferenceException, IndexError):
                 # If we cannot get the data, return the result up to that point
                 driver.close()
                 print(f'El proceso se interrumpio. {iddep+str(year)+str(n_attempt)}')
@@ -512,3 +517,113 @@ def obtener_infraccion(dflistos, iddep:str, ventana=True, delay=2):
     # If all works good
     driver.close()
     return {'estado': True, 'df': results}
+
+# Get files from a list
+def scrap_procesos(dflistos:pd.DataFrame, list_crimenes:list, ventana=False, delay=2):
+
+    # 1 - Figure out next proceso:
+    options = webdriver.FirefoxOptions()
+    options.headless = ventana # do not show browser window
+    options.page_load_strategy = 'none' # Dont wait page to be loaded
+    #options.set_preference("general.useragent.override", UserAgent().random)
+
+    # Start Driver
+    gecko_path = Path.home()/'Documents/geckodriver.exe'
+    driver = webdriver.Firefox(executable_path=gecko_path, options=options)
+    url = 'http://consultas.funcionjudicial.gob.ec/informacionjudicial/public/informacion.jsf'
+    driver.get(url)
+
+    # 3 - Loop over years and numeros
+    dfestado = pd.DataFrame()
+    documentos = {} # Empty dict to save documents downloaded
+
+    # Obtener listados
+    procesos_lst = list(dflistos.loc[dflistos['estado']==0, 'id_proceso'])
+
+    for proc in procesos_lst:
+        
+        # Get data about 
+        iddep = proc[:5]
+        year = proc[5:9]
+        sec = proc[9:].rstrip(' ')
+
+        # I'll try to catch any erros in the webscrap
+        try:
+
+            # Scrap the data
+            res_dict = scrap_crimenes(driver, iddep, year, sec, list_crimenes, delay=delay)
+
+            for res in res_dict:
+                
+                # Split the dict between estado del caso y datos para guardar
+                for key in ['causa', 'demandante', 'demandado']:
+                    res.pop(key, None)
+
+                dfestado = pd.concat([dfestado, pd.DataFrame({'id_proceso': [res['id_proceso']], 'estado': [1]})], ignore_index=True)
+                documentos.update({res['id_proceso']: res})
+
+        except (ElementNotInteractableException, ElementClickInterceptedException, StaleElementReferenceException, AttributeError):
+            # If we cannot get the data, return the result up to that point
+            driver.close()
+            print(f'El proceso se interrumpio. {iddep+year+sec}')
+            return {'estado': False, 'df':dfestado, 'docs': documentos}
+
+    # If all works good
+    driver.close()
+    return {'estado': True, 'df':dfestado, 'docs': documentos}
+
+
+def scrap_2010_2014(dflistos:pd.DataFrame, list_crimenes:list, ventana=False, delay=2):
+    
+    options = webdriver.FirefoxOptions()
+    options.headless = ventana # do not show browser window
+    options.page_load_strategy = 'none' # Dont wait page to be loaded
+    #options.set_preference("general.useragent.override", UserAgent().random)
+
+    # Start Driver
+    gecko_path = Path.home()/'Documents/geckodriver.exe'
+    driver = webdriver.Firefox(executable_path=gecko_path, options=options)
+    url = 'http://consultas.funcionjudicial.gob.ec/informacionjudicial/public/informacion.jsf'
+    driver.get(url)
+
+    # Loop over procesos
+    resumen = pd.DataFrame()
+    documentos = {}
+
+    por_scrapear = dflistos.loc[dflistos['estado']==0].reset_index(drop=True).copy()
+
+    for idx in range(por_scrapear.shape[0]):
+
+        # Get data
+        iddep = por_scrapear.loc[idx, 'id_judicatura']
+        year = por_scrapear.loc[idx, 'year']
+        sec = por_scrapear.loc[idx, 'id_sec']
+
+        # I'll try to catch any erros in the webscrap
+        try:
+
+            # Scrap the data
+            res_lst = scrap_crimenes(driver, iddep, year, sec, list_crimenes, delay=delay)
+
+            for res_dict in res_lst:
+                
+                # Resumen caso
+                general_set = set(res_dict.keys()).intersection({'id_proceso', 'causa', 'demandante', 'demandado'})
+                general_dict = {key: [res_dict[key]] for key in list(general_set)}
+                resumen=pd.concat([resumen, pd.DataFrame(general_dict)], ignore_index=True)
+
+                # For documents
+                docs_dict = res_dict.copy()
+                for key in ['causa', 'demandante', 'demandado']:
+                    docs_dict.pop(key, None)
+                documentos.update({res_dict['id_proceso']: docs_dict})
+
+        except:
+            # If we cannot get the data, return the result up to that point
+            driver.close()
+            print(f'El proceso se interrumpio. {iddep+year+sec}')
+            return {'estado': False, 'df':resumen, 'docs': documentos}
+
+    # If all works good
+    driver.close()
+    return {'estado': True, 'df':resumen, 'docs': documentos}

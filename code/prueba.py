@@ -4,75 +4,81 @@ from pyprojroot import here
 import sys
 import warnings
 import re
-
-
-import time
 from selenium import webdriver
-from bs4 import BeautifulSoup
 
-from fake_useragent import UserAgent
-
-from selenium.common.exceptions import ElementNotInteractableException
-from selenium.common.exceptions import ElementClickInterceptedException
-from selenium.common.exceptions import StaleElementReferenceException
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-
-# Definir paths
+# Set Paths
 root = here()
-raw = root/'data/raw'
 proc = root/'data/proc'
-
+raw = root/'data/raw'
 
 # Load scraper
 sys.path.insert(1, (root/'code').as_posix())
 warnings.filterwarnings("ignore", category=DeprecationWarning)
-from scrap_crimenes import obtener_datos
+from scrap_crimenes import obtener_archivos
 from scrap_crimenes import scrap_crimenes
 
 
-### Prueba
-iddep = '09266'
-year = '2015'
-sec = '0001'
-
 # Obtener listado de crimenes
-delitos = pd.read_csv(proc/'lista_delitos.csv')
-delitos = list(delitos['NOMBRE DELITO'])
+delitos = pd.read_excel(proc/'delitos_lists/delitos_2010_2014_gye.xlsx')
+delitos = list(delitos.loc[delitos['eliminar']!=1, 'accion'])
 
 
-# 2 - Run Webscraper
-
-# Define options for browser
+#######################################################
+# Start driver
 options = webdriver.FirefoxOptions()
-options.headless = False # True= do not show browser window
+options.headless = False # do not show browser window
 options.page_load_strategy = 'none' # Dont wait page to be loaded
 #options.set_preference("general.useragent.override", UserAgent().random)
 
 # Start Driver
 gecko_path = Path.home()/'Documents/geckodriver.exe'
-url = 'http://consultas.funcionjudicial.gob.ec/informacionjudicial/public/informacion.jsf'
-
-
 driver = webdriver.Firefox(executable_path=gecko_path, options=options)
+url = 'http://consultas.funcionjudicial.gob.ec/informacionjudicial/public/informacion.jsf'
 driver.get(url)
-res_dict = scrap_crimenes(driver, iddep, str(year), sec, delitos, delay=2)
+
+dflistos = pd.read_excel(proc/'scrap_lists/2010_2014/09100.xlsx', dtype={'id_judicatura': str, 'id_sec': str, 'year': str})
+
+dfestado = pd.DataFrame()
+documentos = {}
+
+for idx in range(4):
+
+    # Get data
+    iddep = dflistos.loc[idx, 'id_judicatura']
+    year = dflistos.loc[idx, 'year']
+    sec = dflistos.loc[idx, 'id_sec']
+
+    # I'll try to catch any erros in the webscrap
+
+        # Scrap the data
+    res_lst = scrap_crimenes(driver, iddep, year, sec, delitos, delay=2)
+
+    for res_dict in res_lst:
+        
+        # Split the dict between estado del caso y datos para guardar
+        for key in ['causa', 'demandante', 'demandado']:
+            res_dict.pop(key, None)
+
+        dfestado = pd.concat([dfestado, pd.DataFrame({'id_proceso': [res_dict['id_proceso']], 'estado': [1]})], ignore_index=True)
+        documentos.update({res_dict['id_proceso']: res_dict})
 
 
-general_dict = {key: res_dict[key] for key in ['id_proceso', 'causa']}
+dflistos
+dfestado.drop_duplicates(ignore_index=True)
+
+encontrado = dfestado.drop_duplicates(ignore_index=True).loc[1, 'id_proceso']
+
+import fuzzymatcher as fz
+import numpy as np
+
+matched = fz.fuzzy_left_join(dflistos, dfestado.drop_duplicates(ignore_index=True), left_on='proceso_long', right_on='id_proceso')
+
+# Save matched id
+matched.loc[(~matched['id_proceso'].isna()) & (matched['id_matched'].isna()), 'id_matched'] = matched['id_proceso']
+matched['estado'] = np.where((matched['estado_left']==1)|(matched['estado_right']==1), 1, 0)
 
 
-resumen = pd.DataFrame()
+matched.drop(columns=['__id_left', '__id_right', 'best_match_score', 'estado_left', 'estado_right', 'id_proceso'], inplace = True)
 
-for res in res_dict:               
-    # Split the dict between estado del caso y datos para guardar
-    general_dict = {key: [res[key]] for key in ['id_proceso', 'causa']}
-    docs_dict = res.copy()
-    docs_dict.pop('causa', None)
-    
-    # Save resumen
-    resumen=pd.concat([resumen, pd.DataFrame(general_dict)], ignore_index=True)
+matched
 
-
-res_dict[0]

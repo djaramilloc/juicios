@@ -23,29 +23,29 @@ delitos = list(delitos['NOMBRE DELITO'])
 
 
 #Obtener listado de dependencias judiciales
-db_depen = pd.read_csv(proc/'restantes_2015.csv', dtype={'id_judicatura': str})
-lista2015 = list(db_depen['id_judicatura'])
+#db_depen = pd.read_csv(proc/'restantes_2015.csv', dtype={'id_judicatura': str})
+db_depen = pd.read_csv(proc/'restantes_gye.csv', dtype={'id_judicatura': str})
+listagye = list(db_depen['id_judicatura'])
 
-num = 2
-depnumber = lista2015[num]
+num = 0
+depnumber = listagye[num]
 
 print(f'Running {depnumber} ({num})')
 
 # Create file
 try:
-    df_start = pd.read_csv(proc/f'delitos_web/resumen_{depnumber}.csv', dtype={'id_judicatura': str}, encoding='latin-1')
+    df_start = pd.read_csv(proc/f'delitos_web/resumen_{depnumber}.csv', dtype={'id_proceso': str})
 except FileNotFoundError:
     df_start = pd.DataFrame()
 
 # First attempt
-res = obtener_archivos(df_start, depnumber, delitos, ventana=False, delay=2, y0=2015, ylast=2015)
+res = obtener_archivos(df_start, depnumber, delitos, ventana=False, delay=4, y0=2016, ylast=2020)
 
 # Save resumen
 resumendf = (pd
              .concat([df_start, res['resumen_df']], ignore_index=True)
-             .sort_values('id_proceso', ignore_index=True)
              .copy())
-resumendf.to_csv(proc/f'delitos_web/resumen_{depnumber}.csv', index=False, encoding='latin-1')
+resumendf.to_csv(proc/f'delitos_web/resumen_{depnumber}.csv', index=False)
 
 # Loop over each case downloaded
 for id_proceso, dict_proceso in res['docs'].items():
@@ -75,12 +75,11 @@ for id_proceso, dict_proceso in res['docs'].items():
 
 # Loop while false
 while res['estado'] == False:
-    res = obtener_archivos(resumendf, depnumber, delitos, ventana=False, delay=2, y0=2015, ylast=2015)
+    res = obtener_archivos(resumendf, depnumber, delitos, ventana=False, delay=3, y0=2016, ylast=2020)
     resumendf = (pd
                 .concat([resumendf, res['resumen_df']], ignore_index=True)
-                .sort_values('id_proceso', ignore_index=True)
                 .copy())
-    resumendf.to_csv(proc/f'delitos_web/resumen_{depnumber}.csv', index=False, encoding='latin-1')
+    resumendf.to_csv(proc/f'delitos_web/resumen_{depnumber}.csv', index=False)
 
     # Loop over each case downloaded
     for id_proceso, dict_proceso in res['docs'].items():
@@ -111,9 +110,8 @@ while res['estado'] == False:
 else:
     resumendf = (pd
                 .concat([resumendf, res['resumen_df']], ignore_index=True)
-                .sort_values('id_proceso', ignore_index=True)
                 .copy())
-    resumendf.to_csv(proc/f'delitos_web/resumen_{depnumber}.csv', index=False, encoding='latin-1')
+    resumendf.to_csv(proc/f'delitos_web/resumen_{depnumber}.csv', index=False)
     
     # Loop over each case downloaded
     for id_proceso, dict_proceso in res['docs'].items():
@@ -141,3 +139,4 @@ else:
                         _ = f.write(cont_docs)
 
     print(f'Finally!!! {depnumber}')
+

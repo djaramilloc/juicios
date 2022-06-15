@@ -1,0 +1,7 @@
+---------------------------
+Tramite
+---------------------------
+Access violation at address 0062FD65 in module 'Tramite.exe'. Write of address 06AE95B2.
+---------------------------
+Aceptar   
+---------------------------

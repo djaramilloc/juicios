@@ -1,0 +1,11 @@
+Files Structure
+
+'proc/delitos_web/' Saves all the scrapped files
+	'~/files' Has a folder for each process. Within each folder there are txt files containing the sentencias of each case
+	'~/old_delitos' Contains excel files with the sentencias. Some of this are cropped by the length.
+	'~/resumenes' Contians a csv file for each proceso, with the type of crime and the demandado.
+
+'proc/scrap_lists' Contains files listing the process/judicatura to scrap
+	'~/2010_2014' Has all the process to scrap, divided by judicaturas
+	'procesos_incompletos.csv' Contains the procesos that were cropped when downloaded into excel
+	'restantes_2015.csv' List of judicaturas que no fueron incluidas en el primer scrap, proque no estaban en la lista.

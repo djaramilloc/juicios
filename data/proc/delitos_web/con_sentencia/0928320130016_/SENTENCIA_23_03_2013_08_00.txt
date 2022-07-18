@@ -1,0 +1,15 @@
+09283-2013-0016* 
+
+Providencia cargada automáticamente desde la información de estado digitada en el período de transición, durante la depuración de las causas.
+
+Estado Actual: TERMINADO
+Tipo de Terminación: SENTENCIA
+Forma de terminación: CONDENATORIA
+Ultima Actividad: BOLETA DE LIBERTAD
+Fecha de la última actividad: 26/02/2013
+Responsable del proceso: PAZAN GOMEZ CARLOS
+Fecha de Inicio: 23/02/2013
+Fecha de resolución: 23/03/2013
+Usuario: PAZANC
+Máquina: GUA-WS-BKKS64V1,
+Fecha de digitación: 06

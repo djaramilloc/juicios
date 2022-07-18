@@ -5,6 +5,7 @@ import sys
 import warnings
 import re
 from selenium import webdriver
+from code.scrap_crimenes import tabla_nombre_delitos
 
 # Set Paths
 root = here()
@@ -36,6 +37,19 @@ driver = webdriver.Firefox(executable_path=gecko_path, options=options)
 url = 'http://consultas.funcionjudicial.gob.ec/informacionjudicial/public/informacion.jsf'
 driver.get(url)
 
+waits = 20
+delay = 1
+iddep = '09284'
+year = '2015'
+secuencial = '02836'
+
+proc = r.contents[0]
+
+proc.text.split('\n', 1)[0]
+
+
+r = tabla_nombre_delitos('09284', '2015', '02836', driver)
+r
 dflistos = pd.read_excel(proc/'scrap_lists/2010_2014/09100.xlsx', dtype={'id_judicatura': str, 'id_sec': str, 'year': str})
 
 dfestado = pd.DataFrame()

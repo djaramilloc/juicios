@@ -1,0 +1,15 @@
+09453-2011-0843* 
+
+Providencia cargada automáticamente desde la información de estado digitada en el período de transición, durante la depuración de las causas.
+
+Estado Actual: TERMINADO
+Tipo de Terminación: SENTENCIA
+Forma de terminación: CONDENATORIA
+Ultima Actividad: RAZON
+Fecha de la última actividad: 15/03/2012
+Responsable del proceso: AB. GUILLERMO ESPINOZA DE LOS MONTEROS
+Fecha de Inicio: 09/09/2011
+Fecha de resolución: 16/11/2011
+Usuario: ESPINOZAG
+Máquina: XMTRN03GYE05, ESPINOZAG
+Fecha 

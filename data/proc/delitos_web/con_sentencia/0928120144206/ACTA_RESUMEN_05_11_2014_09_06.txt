@@ -1,0 +1,97 @@
+Datos:
+
+Nombre del Juez/a:
+      Dr. Eduardo Antonio Díaz Navarrete
+
+Nombre del Secretario/a:
+Ab. Zoila Jacqueline Arcentales Zambrano
+
+Identificación del Proceso:
+
+Número de Causa:
+4206-2014
+Lugar y Fecha de Realización:
+Guayaquil, 05 de Noviembre del 2014
+Hora de Inicio:
+08h50
+Presunta Infracción/Delito/Contravención:
+INGRESO DE ARTICULOS PROHIBIDOS
+Sala:
+6
+
+Desarrollo de la Audiencia: 
+
+Tipo de Audiencia:
+
+Audiencia de Calificación de Flagrancia: (     )
+Audiencia de Formulación de Cargos: (     )
+Audiencia Preparatoria de Juicio:  (     )
+Audiencia de Juicio: (      )
+Audiencia de Juzgamiento por procedimiento directo:  (  X  )
+Audiencia de Sustitución de Medidas:  (    )
+Audiencia de Suspensión Condicional:  (    )
+Audiencia de Acuerdos Reparatorios:  (    )
+Audiencia de Revocatoria de Suspensión Condicional:  (    )
+Audiencia de Medida Cautelar de Prisión Preventiva: (    )
+Audiencia de Procedimiento Abreviado:  (    )
+Audiencia de Procedimiento Simplificado: (    )
+Audiencia de Legalidad de Detención: (    )
+Audiencia de Revisión de Medidas Cautelares: (    )
+Audiencia de Apelación de Medidas Cautelares:  (    )
+
+
+Partes Procesales:
+
+Nombre del Fiscal:
+Casilla Judicial de Fiscalía:
+Ab.  CARLOS CARANQUI MOROCHO
+
+3130
+
+Procesado/s:
+Nombre Defensor Público:
+Casilla Judicial:
+LUIS ALFREDO OCAMPO DEL PRADO 
+Ab. JOSE REY MERIZALDE   
+5616 
+
+Actuaciones:
+
+Actuaciones del Procesado:
+
+Justifica Arraigo Social:  			SI (    )   NO (    )
+Solicita Medidas Sustitutivas:  		SI (    )   NO (    )
+Solicita Pericia:  					SI (    )   NO (    )
+Vicios de Procedibilidad:  			SI (    )   NO (    )
+Vicios de Competencia Territorial: 		SI (    )   NO (    )
+Existen Vicios Procesales:  			SI (    )   NO (    )
+Solicita Procedimiento Abreviado:  		SI (    )   NO (    )
+Solicita Acuerdo Reparatorio: 	           		SI (    )   NO (    )  
+
+Actuaciones de Fiscalía:
+
+Acusa:  						SI (   )   NO (    )
+Solicita Prisión Preventiva:  			SI (   )   NO (    )
+Solicita Pericia:  					SI (   )   NO (    )
+Dictamen Acusatorio:  				SI (   )  NO (    )
+Dictamen Abstentivo: 				SI (   )  NO (   )
+Acepta Procedimiento Abreviado:  		SI (   )  NO (    )
+Solicita Procedimiento Simplificado:      	SI (   )  NO (    )
+Acepta Acuerdo Reparatorio: 			SI (   )  NO (    )
+Solicita Medidas Cautelares: 			SI (   )  NO (    )
+Otro ( Especifique)
+ 
+
+Resolución del Juez:
+Al instalar esta audiencia de acuerdo a la información efectuada por la Secretaria estableciendo que no se encuentra al momento físicamente en esta sala el procesado LUIS ALFREDO OCAMPO DEL PRADO, quien no ha sido trasladado hasta este lugar al encontrarse privado de su libertad, por lo que no se puede realizar esta audiencia sin la presencia del mencionado procesado, se suspende la realización de esta audiencia debiéndose señalar la nueva fecha para que tenga lugar la indicada audiencia, por lo que conforme a lo que prescribe el numeral 6 del art. 640 del Código Orgánico Integral Penal, SE CONVOCA A LAS PARTES PARA EL DÍA 20 DE NOVIEMBRE DEL 2014, A LAS 08H30, PARA TENGA LUGAR LA AUDIENCIA DE JUICIO DIRECTO QUEDANDO NOTIFICADAS LAS PARTES CON ESTA CONVOCATORIA.
+
+Razón:
+
+El contenido de la audiencia reposa en el archivo de la Judicatura. La presente acta queda debidamente suscrita conforme lo dispone la Ley, por la Secretaria de la Unidad Judicial De Garantías Penales Con Competencia En Delitos Flagrantes De Guayaquil, Provincia Del Guayas, el mismo que da fe de su contenido. Las partes quedan notificadas con las decisiones adoptadas en la presente audiencia sin perjuicio de lo dispuesto en la Ley respecto de su notificación escrita en las casillas judiciales que las partes procesales han señalado para tal efecto.
+
+Hora de Finalización:
+08h57
+
+
+Ab. Jacqueline Arcentales Zambrano
+SECRETARIA

@@ -1,0 +1,15 @@
+09901-2010-0039  
+
+Providencia cargada automáticamente desde la información de estado digitada en el período de transición, durante la depuración de las causas.
+
+Estado Actual: TERMINADO
+Tipo de Terminación: SENTENCIA
+Forma de terminación: NEGANDO
+Ultima Actividad: CUMPLIO PENA CON REBAJAS
+Fecha de la última actividad: 01/05/2011
+Responsable del proceso: BELTRAN BAQUERIZO MILKO
+Fecha de Inicio: 22/08/2009
+Fecha de resolución: 05/08/2010
+Usuario: BELTRANMI
+Máquina: 02TRIB01GYE05,
+Fecha de digitac

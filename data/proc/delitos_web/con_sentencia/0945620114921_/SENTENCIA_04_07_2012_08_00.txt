@@ -1,0 +1,15 @@
+09456-2011-4921* 
+
+Providencia cargada automáticamente desde la información de estado digitada en el período de transición, durante la depuración de las causas.
+
+Estado Actual: TERMINADO
+Tipo de Terminación: SENTENCIA
+Forma de terminación: CONDENATORIA
+Ultima Actividad: SENTENCIA 15 DIAS
+Fecha de la última actividad: 30/10/2011
+Responsable del proceso: AB. LUNA COELLO LUIS
+Fecha de Inicio: 29/10/2011
+Fecha de resolución: 04/07/2012
+Usuario: PIMENTELD
+Máquina: XMTRN06GYE02, pimenteld
+Fecha de dig

@@ -1,0 +1,14 @@
+09311-2010-1053  
+
+Providencia cargada automáticamente desde la información de estado digitada en el período de transición, durante la depuración de las causas.
+
+Estado Actual: TERMINADO
+Tipo de Terminación: SENTENCIA
+Forma de terminación: NEGANDO
+Ultima Actividad: DICTA  SENTENCIA - RAZON DE EJECUTORIA
+Fecha de la última actividad: 17/06/2011
+Responsable del proceso: AB. GUILLERMO REVELO
+Fecha de Inicio: 18/11/2010
+Fecha de resolución: 31/03/2011
+Usuario: REVELOG
+Máquina: 04CIVIL11GYE06, REVELO

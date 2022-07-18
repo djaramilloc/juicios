@@ -1,0 +1,98 @@
+Datos:
+
+Nombre del Juez/a:
+      Dr. Eduardo Antonio Díaz Navarrete
+
+Nombre del Secretario/a:
+Ab. Zoila Jacqueline Arcentales Zambrano
+
+Identificación del Proceso:
+
+Número de Causa:
+3758-2014
+Lugar y Fecha de Realización:
+Guayaquil, 03 de Octubre del 2014
+Hora de Inicio:
+15h30
+Presunta Infracción/Delito/Contravención:
+Tráfico ilícito de sustancias catalogadas sujetas a fiscalización
+Sala:
+3
+
+Desarrollo de la Audiencia: 
+
+Tipo de Audiencia:
+
+Audiencia de Calificación de Flagrancia: (     )
+Audiencia de Formulación de Cargos: (     )
+Audiencia Preparatoria de Juicio:  (     )
+Audiencia de Juicio: (      )
+Audiencia de Juzgamiento por procedimiento directo:  (  X   )
+Audiencia de Sustitución de Medidas:  (    )
+Audiencia de Suspensión Condicional:  (    )
+Audiencia de Acuerdos Reparatorios:  (    )
+Audiencia de Revocatoria de Suspensión Condicional:  (    )
+Audiencia de Medida Cautelar de Prisión Preventiva: (    )
+Audiencia de Procedimiento Abreviado:  (    )
+Audiencia de Procedimiento Simplificado: (    )
+Audiencia de Legalidad de Detención: (    )
+Audiencia de Revisión de Medidas Cautelares: (    )
+Audiencia de Apelación de Medidas Cautelares:  (    )
+
+Partes Procesales:
+
+Nombre del Fiscal:
+Casilla Judicial de Fiscalía:
+Ab.   ROBINSON CORONEL LUCERO
+
+3130
+
+Procesado/s:
+Nombre Defensor Público:
+Casilla Judicial:
+ GONZALO MARVIN JIMENEZ MORÁN 
+Ab. ENRIQUE ESPINOZA CASTRO
+5616
+
+Actuaciones:
+
+Actuaciones del Procesado:
+
+Justifica Arraigo Social:  			SI (    )   NO (    )
+Solicita Medidas Sustitutivas:  		SI (    )   NO (    )
+Solicita Pericia:  				SI (    )   NO (    )
+Vicios de Procedibilidad:  			SI (    )   NO (    )
+Vicios de Competencia Territorial: 	SI (    )   NO (    )
+Existen Vicios Procesales:  			SI (    )   NO (    )
+Solicita Procedimiento Abreviado:  	SI (    )   NO (    )
+Solicita Acuerdo Reparatorio: 	           SI (    )   NO (    )
+Alegato de apertura: Señor Juez,  de conformidad con el art. 364 de la Constitución, la defensa demostrará la adicción de mi defendido y solicita que se continúe con la audiencia. 
+Señor Juez, es legal es permitida la suspensión de la audiencia. 
+
+Actuaciones de Fiscalía:
+
+Acusa:  						SI (   )   NO (    )
+Solicita Prisión Preventiva:  			SI (   )   NO (    )
+Solicita Pericia:  				SI (   )   NO (    )
+Dictamen Acusatorio:  			SI (   )  NO (    )
+Dictamen Abstentivo: 			SI (   )  NO (   )
+Acepta Procedimiento Abreviado:  	SI (   )  NO (    )
+Solicita Procedimiento Simplificado:      	SI (   )  NO (    )
+Acepta Acuerdo Reparatorio: 		SI (   )  NO (    )
+Solicita Medidas Cautelares: 		SI (   )  NO (    )
+Otro ( Especifique)
+Alegato de apertura: Señor Juez, el día 24 de septiembre del 2014, fue detenido  GONZALO MARVIN JIMENEZ MORÁN, por el delito de tenencia y posesión ilícita de sustancias sujetas a fiscalización, lo que se dejará sustentado y demostrado conforme a derecho. El suscrito Fiscal está presente en reemplazo del señor Ab. JUAN CARLOS ITURRALDE HIDALGO, Fiscal titular, quien no se encuentra presente por motivos ajenos a su voluntad.  
+Etapa de prueba: La Fiscalía hace conocer que la producción de la prueba, no se encuentra en condiciones de producirlas, amparado en el art. 640 numeral 6 del Código Orgánico Integral Penal, solicito que se suspenda la audiencia y se convoque para fecha posterior.  
+
+Resolución del Juez:
+Habiéndose solicitado la suspensión de esta audiencia amparado en lo que prescribe el art. 640 numeral 6 del Código Orgánico Integral Penal, se suspende a esta audiencia y SE CONVOCA A LAS PARTES PARA EL DÍA 17 DE OCTUBRE A LAS 15H30, para que tenga lugar la reinstalación de la audiencia. 
+
+Razón:
+
+El contenido de la audiencia reposa en el archivo de la Judicatura. La presente acta queda debidamente suscrita conforme lo dispone la Ley, por la Secretaria de la Unidad Judicial De Garantías Penales Con Competencia En Delitos Flagrantes De Guayaquil, Provincia Del Guayas, el mismo que da fe de su contenido. Las partes quedan notificadas con las decisiones adoptadas en la presente audiencia sin perjuicio de lo dispuesto en la Ley respecto de su notificación escrita en las casillas judiciales que las partes procesales han señalado para tal efecto.
+
+Hora de Finalización:
+17h25
+
+Ab. Jacqueline Arcentales Zambrano
+SECRETARIA

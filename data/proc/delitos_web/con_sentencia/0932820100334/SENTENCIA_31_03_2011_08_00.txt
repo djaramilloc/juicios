@@ -1,0 +1,15 @@
+09328-2010-0334  
+
+Providencia cargada automáticamente desde la información de estado digitada en el período de transición, durante la depuración de las causas.
+
+Estado Actual: TERMINADO
+Tipo de Terminación: SENTENCIA
+Forma de terminación: ACEPTANDO
+Ultima Actividad: DECRETO
+Fecha de la última actividad: 31/05/2011
+Responsable del proceso: ALEJANDRO MORAN
+Fecha de Inicio: 05/04/2010
+Fecha de resolución: 31/03/2011
+Usuario: MORANA
+Máquina: 04CIVIL28GYE04, MORANA
+Fecha de digitación: 25/10/2011

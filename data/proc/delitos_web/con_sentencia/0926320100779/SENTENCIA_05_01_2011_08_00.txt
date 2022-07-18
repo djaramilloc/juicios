@@ -1,0 +1,15 @@
+09263-2010-0779  
+
+Providencia cargada automáticamente desde la información de estado digitada en el período de transición, durante la depuración de las causas.
+
+Estado Actual: TERMINADO
+Tipo de Terminación: SENTENCIA
+Forma de terminación: NEGANDO
+Ultima Actividad: CONCEDE RECURSO DE APELACION
+Fecha de la última actividad: 08/04/2011
+Responsable del proceso: AB. MARIA DUEÑAS VELEZ
+Fecha de Inicio: 14/01/2010
+Fecha de resolución: 05/01/2011
+Usuario: DUEÑASM
+Máquina: 01PENAL13GYE06, DUEÑASM
+Fecha 

@@ -1,0 +1,13 @@
+09901-2011-0160  
+
+Providencia cargada automáticamente desde la información de estado digitada en el período de transición, durante la depuración de las causas.
+
+Estado Actual: TERMINADO
+Tipo de Terminación: SENTENCIA
+Forma de terminación: NEGANDO
+Ultima Actividad: SE ORDENA LIBERTAD POR HABER CUMPLIDO SENTENCIA CONDENATORIA EJECUTORIADA
+Fecha de la última actividad: 30/08/2011
+Responsable del proceso: ROMERO QUINTERO MARIA
+Fecha de Inicio: 23/06/2011
+Fecha de resolución: 17/08/2011
+Usuario: ROM

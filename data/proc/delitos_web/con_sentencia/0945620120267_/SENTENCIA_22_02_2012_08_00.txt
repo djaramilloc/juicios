@@ -1,0 +1,14 @@
+09456-2012-0267* 
+
+Providencia cargada automáticamente desde la información de estado digitada en el período de transición, durante la depuración de las causas.
+
+Estado Actual: TERMINADO
+Tipo de Terminación: SENTENCIA
+Forma de terminación: CONDENATORIA
+Ultima Actividad: SENTENCIA 15 DIAS NOTIFICACION
+Fecha de la última actividad: 02/03/2012
+Responsable del proceso: AB. GIOMAR TOURIZ ZAMBRANO
+Fecha de Inicio: 20/02/2012
+Fecha de resolución: 22/02/2012
+Usuario: PIMENTELD
+Máquina: XMTRN06GYE02, pim

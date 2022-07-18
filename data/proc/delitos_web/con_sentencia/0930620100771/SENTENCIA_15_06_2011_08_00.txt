@@ -1,0 +1,15 @@
+09306-2010-0771  
+
+Providencia cargada automáticamente desde la información de estado digitada en el período de transición, durante la depuración de las causas.
+
+Estado Actual: TERMINADO
+Tipo de Terminación: SENTENCIA
+Forma de terminación: ACEPTANDO
+Ultima Actividad: NOTIFICACIÓN
+Fecha de la última actividad: 21/09/2012
+Responsable del proceso: AB. ANIBAL DE LA CUADRA
+Fecha de Inicio: 25/08/2010
+Fecha de resolución: 15/06/2011
+Usuario: CEDEÑOS
+Máquina: GUA-WS-PT509201,
+Fecha de digitación: 21/09

@@ -1,0 +1,15 @@
+09901-2010-0078  
+
+Providencia cargada automáticamente desde la información de estado digitada en el período de transición, durante la depuración de las causas.
+
+Estado Actual: TERMINADO
+Tipo de Terminación: SENTENCIA
+Forma de terminación: NEGANDO
+Ultima Actividad: SE CONCEDEN COPIAS
+Fecha de la última actividad: 03/03/2011
+Responsable del proceso: BELTRAN BAQUERIZO MILKO
+Fecha de Inicio: 30/03/2010
+Fecha de resolución: 12/07/2010
+Usuario: BELTRANMI
+Máquina: 02TRIB01GYE05,
+Fecha de digitación: 1

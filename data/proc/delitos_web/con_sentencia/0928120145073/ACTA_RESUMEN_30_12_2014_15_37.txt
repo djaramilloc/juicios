@@ -1,0 +1,106 @@
+1.	Datos:
+a.	Nombre del Juez/a:
+Ab. Carlos Alberto Redwood Villa.	
+b.	Nombre del Secretaria 
+¬¬¬¬¬¬¬¬¬¬¬¬¬¬Ab. Carla Balcázar Álvarez.
+2.	Identificación del Proceso:
+a.	Número de Causa:
+2014-5073
+b.	Lugar y Fecha de Realización:
+Guayaquil, 30  de Diciembre del 2014
+c.	Hora de Inicio:14h30
+
+d.	Presunta Infracción/Delito:   tráfico ilícito de sustancias sujetas a fiscalización
+ 
+3.	Desarrollo de la Audiencia:
+a.	Tipo de Audiencia:
+1.	Audiencia de Calificación de Flagrancia: (  )
+2.	Audiencia de Formulación de Cargos: (     )
+3.	Audiencia Preparatoria de Juicio:  (    )
+4.	Audiencia de Juicio: (      )
+5.	Audiencia de Juzgamiento:  (     )
+6.	Audiencia de Sustitución de Medidas:  (    )
+7.	Audiencia de Suspensión Condicional:  (    )
+8.	Audiencia de Acuerdos Reparatorio:  (    )
+9.	Audiencia de Revocatoria de Suspensión Condicional:  (    )
+10.	Audiencia de Medida Cautelar de Prisión Preventiva: (    )
+11.	Audiencia de Procedimiento Abreviado:  (    )
+12.	Audiencia de Procedimiento Simplificado: (    )
+13.	Audiencia de Legalidad de Detención: (    )
+14.	Audiencia de Revisión de Medidas Cautelares: (  )
+15.	Audiencia de Apelación de Medidas Cautelares:  (    )
+
+b.	Partes Procesales:
+
+1.	Nombre del Fiscal:	2.	Casilla Judicial de Fiscalía:
+AB. Giovanny Zambrano Bermúdez	3130
+
+
+3.	Procesado/s:	4.	Nombre Defensor Público: 	5.	Casilla Judicial:
+ John Freddy Yagual Alfonso	
+ABG.  Ángel Custodio  Zumba Gómez	
+5616
+
+
+4.	Actuaciones:
+a.	Actuaciones del Procesado:
+1.	Justifica Arraigo Social:  		SI (    )   NO (    )
+2.	Medidas Sustitutivas:  		SI (    )   NO (    )
+3.	Solicita Pericia:  			SI (    )   NO (    )
+4.	Objeción con la detención:	SI (   )    NO (    )
+5.	Vicios de Procedibilidad:  		SI (    )   NO ( x )
+6.	Vicios de Competencia Territorial: 	SI (    )   NO ( x )
+7.	Existen Vicios Procesales:  	SI (    )   NO ( x )
+8.	Solicita Procedimiento Abreviado: 	SI (    )   NO (    )
+9.	Solicita Acuerdo Reparatorio: 	SI (  )   NO (    )
+10.	Solicita sea escuchada su defendido: SI (   )    NO (    )
+11.	Solicita se dicte sobreseimiento: SI (  )   NO (    )
+
+Defensa expresa: Hemos llegado a un acuerdo con la fiscalía con  la pericia química, la prueba que va ser valer la defensa es el examen toxicológico, tenemos un certificado del centro de rehabilitación de paraíso de dios que corrobora que mi representado ha estado en un tratamiento combatiendo su adicción, solicito se ratifique el estado de inocencia, en mérito de las pruebas incorporadas de la fiscalía solcito se tome en cuenta el examen toxicológico y psicosomático, y se ratifique el estado de inocencia de mi representado.
+
+John Freddy Yagual Alfonso: soy consumidor esperaba mi amigo para consumir y llegaron los agentes, y comenzaron con el allanamiento, de ahí me detuvieron y me trajeron al modelo.
+
+Actuaciones de Fiscalía
+1.	Acusa:  				SI ()  NO ()
+2.	Solicita Legalización de la detención: SI (    )  NO (     )
+3.	Solicita se dicte prisión preventiva: SI   )  NO (   )
+4.	Solicita que se notifique a las partes con inicio de instrucción: SI (  ) NO   (    )
+5.	Duración de la instrucción: Solicita Pericia:  			SI (   )  NO (  )
+6.	Dictamen Acusatorio:  		SI ()  NO (    )
+7.	Dictamen Abstentivo: 		SI (   )  NO (    )
+8.	Dictamen Mixto: 			SI (   )  NO (    )
+9.	Acepta Procedimiento Abreviado: 	SI ( )  NO (    )
+10.	Solicita la extinción de la acción penal: SI ( )  NO (    )
+11.	Solicita Procedimiento Simplificado: SI (   )  NO (    )
+12.	Acepta Acuerdo Reparatorio: 	SI (   )  NO (    )
+13.	Solicita Medidas Cautelares: 	SI (   )NO (    )
+
+Fiscal expresa: Solicito se llame el policía Cueva Santacruz Pedro Otoniel, agente aprehensor, existe un examen de la pericia química con la defensa existe un acuerdo probatorio,  como prueba de descargo examen psicosomático suscrito por el perito de la fiscalía, señor juez la fiscalía presenta el alegato final hemos escuchado el alegato quien intervino en el allanamiento, la fiscalía entrego pruebas documentales para determinar la materialidad de la infracción, la fiscalía hace entrega del reconocimiento de evidencia, la fiscalía ha probado plenamente la infracción y la responsabilidad de John Freddy Yagual Alfonso existe un delito que afecta el bien público, art. 220 numeral 1 literal a del coip, 
+
+FISCAL PREGUNTA
+ Señor policía Cueva Santacruz Pedro Otoniel usted ha sido llamado como testigo de la fiscalía en razón de que suscribió un parte, indique si su nombre es correcto, explique los hechos que dieron origen a la detención de policía Cueva Santacruz Pedro Otoniel, quienes se encontraban en el inmueble cuando fue detenido el señor John Freddy Yagual Alfonso
+
+Policía Cueva Santacruz Pedro Otoniel responde si (relata los hechos de la aprehensión) estaba la esposa, me ratifico en el parte de aprehensión, los sobres se encontraron cerca del baño
+
+
+ABG.  Ángel Custodio  Zumba Gómez pregunta: al momento de ingresar a la casa donde encontraron los 68 sobres, no más preguntas.
+
+
+
+
+
+
+	Prueba testimonial de la fiscalía
+	 Pedro Otoniel  Cueva Santacruz
+
+14.	Resolución del Juez: 
+ Se ha expuesto  los hechos como se instaló este proceso cumpliendo con una orden judicial ordenada por el abogado Fernando Vergara, los agentes procedieron allanar el inmueble, teniendo como antecedentes que ese lugar se encontraba una persona realizando expendiendo y encontraron al señor John Freddy Yagual Alfonso 50 sobres con sustancias blanquecinas, y en la parte posterior cerca del baño 68 sobres de cocaína peso bruto,  justifica los testimonios de los agentes ,así como también el testimonio del agente Luis Poo Camacho suscriptor del acta de prueba de muestras,  la evidencia constituye base de cocaína, se alegado por parte de la defensa que el señor John Freddy Yagual Alfonso es consumidor y considerando la cantidad e droga, y nos e ha desvirtuado lo dicho por la fiscalía se acusa al señor John Freddy Yagual Alfonso como autor de tráfico ilícito de sustancias sujetas a fiscalización art. 220 numeral 1 literal a, se le impone 2 meses de privación de libertad, acorde al art. 70 numeral 3 del coip 2 salarios  la sentencia con la motivación sera notificada en el término de ley.
+
+15.	Razón:
+El contenido de la audiencia reposa en el archivo de la Judicatura. La presente acta queda debidamente suscrita conforme lo dispone la Ley, por la Secretaria de la Unidad de Garantías Penales del Cantón Guayaquil, el mismo que da fe de su contenido. Las partes quedan notificadas con las decisiones adoptadas en la presente audiencia sin perjuicio de lo dispuesto en la Ley respecto de su notificación escrita en las casillas judiciales que las partes procesales han señalado para tal efecto.
+
+5.	Hora de Finalización:
+15h33
+
+Ab. Carla Balcázar Álvarez
+                                                             SECRETARIA 

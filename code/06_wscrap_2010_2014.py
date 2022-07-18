@@ -21,7 +21,7 @@ delitos = pd.read_excel(proc/'delitos_lists/delitos_2010_2014_gye.xlsx')
 delitos = list(delitos.loc[delitos['eliminar']!=1, 'accion'])
 
 # Listado a procesar
-dep  = '09122'
+dep  = '09281'
 procesos = pd.read_excel(proc/f'scrap_lists/2010_2014/{dep}.xlsx',
                 dtype={'id_judicatura': str, 'id_sec': str, 'year': str, 'id_matched':str, 'proceso_long':str})
 # Resumen of casos
@@ -33,7 +33,7 @@ except FileNotFoundError:
 
 # Start wscrap
 print(f'Start running {dep}')
-res_dict = scrap_2010_2014(procesos, delitos, ventana=False, delay=2)
+res_dict = scrap_2010_2014(procesos, delitos, ventana=False, delay=5)
 
 # Update results
 if res_dict['df'].shape[0] > 0:
@@ -50,7 +50,8 @@ if res_dict['df'].shape[0] > 0:
             
             # Crear una carpeta con el nombre = id_proceso, dentro todos los archivos
             try: 
-                Path(proc/f'delitos_web/files/{id_proceso}').mkdir()
+                folder_name = id_proceso.replace("*", '_')
+                Path(proc/f'delitos_web/files/{folder_name}').mkdir()
             except FileExistsError:
                 pass
 
@@ -64,7 +65,7 @@ if res_dict['df'].shape[0] > 0:
                     name = name.replace(":", "_")
 
                     # Write file
-                    with open(proc/f'delitos_web/files/{id_proceso}/{name}.txt', 'w+') as f:
+                    with open(proc/f'delitos_web/files/{folder_name}/{name}.txt', 'w+') as f:
                         _ = f.write(cont_docs)
 
     # Update estado
@@ -83,7 +84,7 @@ while res_dict['estado'] == False:
     procesos = pd.read_excel(proc/f'scrap_lists/2010_2014/{dep}.xlsx',
             dtype={'id_judicatura': str, 'id_sec': str, 'year': str, 'id_matched':str, 'proceso_long':str})
     resumen = pd.read_excel(proc/f'delitos_web/resumenes/2010_2014/{dep}.xlsx', dtype={'id_proceso': str})
-    res_dict = scrap_2010_2014(procesos, delitos, ventana=False, delay=2)
+    res_dict = scrap_2010_2014(procesos, delitos, ventana=False, delay=5)
 
     # Update results
     if res_dict['df'].shape[0] > 0:
@@ -99,8 +100,9 @@ while res_dict['estado'] == False:
             if len(res_dict['docs'][id_proceso]) > 1:
                 
                 # Crear una carpeta con el nombre = id_proceso, dentro todos los archivos
-                try: 
-                    Path(proc/f'delitos_web/files/{id_proceso}').mkdir()
+                try:
+                    folder_name = id_proceso.replace("*", '_')
+                    Path(proc/f'delitos_web/files/{folder_name}').mkdir()
                 except FileExistsError:
                     pass
 
@@ -114,7 +116,7 @@ while res_dict['estado'] == False:
                         name = name.replace(":", "_")
 
                         # Write file
-                        with open(proc/f'delitos_web/files/{id_proceso}/{name}.txt', 'w+') as f:
+                        with open(proc/f'delitos_web/files/{folder_name}/{name}.txt', 'w+') as f:
                             _ = f.write(cont_docs)
 
         # Update estado
@@ -145,8 +147,9 @@ else:
         if len(res_dict['docs'][id_proceso]) > 1:
             
             # Crear una carpeta con el nombre = id_proceso, dentro todos los archivos
-            try: 
-                Path(proc/f'delitos_web/files/{id_proceso}').mkdir()
+            try:
+                folder_name = id_proceso.replace("*", '_')
+                Path(proc/f'delitos_web/files/{folder_name}').mkdir()
             except FileExistsError:
                 pass
 
@@ -160,7 +163,7 @@ else:
                     name = name.replace(":", "_")
 
                     # Write file
-                    with open(proc/f'delitos_web/files/{id_proceso}/{name}.txt', 'w+') as f:
+                    with open(proc/f'delitos_web/files/{folder_name}/{name}.txt', 'w+') as f:
                         _ = f.write(cont_docs)
 
     # Update estado

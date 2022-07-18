@@ -1,0 +1,14 @@
+09254-2010-1362  
+
+Providencia cargada automáticamente desde la información de estado digitada en el período de transición, durante la depuración de las causas.
+
+Estado Actual: TERMINADO
+Tipo de Terminación: SENTENCIA
+Forma de terminación: NEGANDO
+Ultima Actividad: SE NEGO EL RECURSO SOLICITADO POR EL DENUNCIANTE
+Fecha de la última actividad: 25/10/2010
+Responsable del proceso: AB. JOHANA CABRERA FLORES
+Fecha de Inicio: 04/08/2010
+Fecha de resolución: 25/10/2010
+Usuario: CABRERAJ
+Máquina: 01PENA

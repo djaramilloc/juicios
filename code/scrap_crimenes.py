@@ -435,6 +435,45 @@ def tabla_nombre_delitos(iddep:str, year:str, secuencial:str, driver, delay=1, w
 
         return result_df
 
+def infraccion_lista_delitos(procesos_lst:list, ventana=True, delay=1):
+    """
+    La funcion toma como input una lista de id_procesos para sacar la infraccion
+    """
+
+    # 1. Set up the driver
+    options = webdriver.FirefoxOptions()
+    options.headless = ventana # True= do not show browser window
+    options.page_load_strategy = 'none' # Dont wait page to be loaded
+
+    # Start Driver
+    gecko_path = Path.home()/'Documents/geckodriver.exe'
+    driver = webdriver.Firefox(executable_path=gecko_path, options=options)
+    url = 'http://consultas.funcionjudicial.gob.ec/informacionjudicial/public/informacion.jsf'
+    driver.get(url)
+
+    # Define base for results
+    results = pd.DataFrame()
+
+    # 2. Loop over procesos
+    for proceso in procesos_lst:
+
+        # Get iddep, year and secuencial
+        iddep = proceso[:4+1]
+        year = proceso[5:9]
+        secuencial = proceso[9:]
+
+        try:
+            # Scrap the data
+            res_df = tabla_nombre_delitos(iddep, year, secuencial, driver, delay)
+            results = pd.concat([results, res_df], ignore_index=True)
+        
+        except (ElementNotInteractableException, ElementClickInterceptedException):
+            # If we cannot get the data, return the result up to that point
+            driver.close()
+            print(f'El proceso se interrumpio. {iddep + str(year) + secuencial}')
+            return {'estado': False, 'df': results}
+
+    return {'estado': True, 'df': results}
 
 def obtener_infraccion(dflistos, iddep:str, ventana=True, delay=2):
     """

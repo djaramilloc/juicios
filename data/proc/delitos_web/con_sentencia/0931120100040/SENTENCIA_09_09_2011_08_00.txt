@@ -1,0 +1,14 @@
+09311-2010-0040  
+
+Providencia cargada automáticamente desde la información de estado digitada en el período de transición, durante la depuración de las causas.
+
+Estado Actual: TERMINADO
+Tipo de Terminación: SENTENCIA
+Forma de terminación: NEGANDO
+Ultima Actividad: TYEERMIBNADOPOR SENTENCIA EJECUTORIADA
+Fecha de la última actividad: 04/05/2011
+Responsable del proceso: QUINTEROS PEÑAHERRERA ELOY MARCELINO
+Fecha de Inicio: 15/01/2010
+Fecha de resolución: 09/09/2011
+Usuario: QUINTEROSM
+Máquina: 04C

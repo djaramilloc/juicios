@@ -1,0 +1,15 @@
+09901-2010-0022  
+
+Providencia cargada automáticamente desde la información de estado digitada en el período de transición, durante la depuración de las causas.
+
+Estado Actual: TERMINADO
+Tipo de Terminación: SENTENCIA
+Forma de terminación: NEGANDO
+Ultima Actividad: SENTENCIA
+Fecha de la última actividad: 06/09/2010
+Responsable del proceso: AB. MERCEDES JIMENEZ
+Fecha de Inicio: 15/01/2010
+Fecha de resolución: 06/09/2010
+Usuario: JIMENEZM
+Máquina: 02TRIB01GYE04,
+Fecha de digitación: 15/10/2011

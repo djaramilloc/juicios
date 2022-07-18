@@ -1,0 +1,15 @@
+09901-2010-0157  
+
+Providencia cargada automáticamente desde la información de estado digitada en el período de transición, durante la depuración de las causas.
+
+Estado Actual: TERMINADO
+Tipo de Terminación: SENTENCIA
+Forma de terminación: ACEPTANDO
+Ultima Actividad: SENTENCIAS CONDENATORIA Y ABSOLUTORIA
+Fecha de la última actividad: 07/01/2011
+Responsable del proceso: AB. CHAVEZ OVIEDO JORGE
+Fecha de Inicio: 22/12/2009
+Fecha de resolución: 17/12/2010
+Usuario: CHAVEZJ
+Máquina: 02TRIB01GYE02,
+Fec

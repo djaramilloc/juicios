@@ -1,0 +1,14 @@
+09456-2011-4087* 
+
+Providencia cargada automáticamente desde la información de estado digitada en el período de transición, durante la depuración de las causas.
+
+Estado Actual: TERMINADO
+Tipo de Terminación: SENTENCIA
+Forma de terminación: ACEPTANDO
+Ultima Actividad: SENTENCIA ABSOLUTORIA Y ACTA DE ENTREGA DE VEHCIULO
+Fecha de la última actividad: 09/09/2011
+Responsable del proceso: AB. LUNA COELLO LUIS
+Fecha de Inicio: 30/08/2011
+Fecha de resolución: 08/09/2011
+Usuario: DIAZN
+Máquina: XMTRN06GY

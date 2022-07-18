@@ -1,0 +1,15 @@
+09901-2010-0123  
+
+Providencia cargada automáticamente desde la información de estado digitada en el período de transición, durante la depuración de las causas.
+
+Estado Actual: TERMINADO
+Tipo de Terminación: SENTENCIA
+Forma de terminación: ACEPTANDO
+Ultima Actividad: SENTENCIA ABSOLUTORIA
+Fecha de la última actividad: 13/10/2011
+Responsable del proceso: AB. NARCISO SELLAN HOLGUIN
+Fecha de Inicio: 20/06/2007
+Fecha de resolución: 05/08/2011
+Usuario: SELLANN
+Máquina: 02TRIB01GYE01,
+Fecha de digitac

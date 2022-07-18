@@ -1,0 +1,145 @@
+Identificación del órgano jurisdiccional:
+
+Órgano Jurisdiccional:
+
+UNIDAD JUDICIAL NORTE 2 PENAL CON SEDE EN EL CANTON GUAYAQUIL, PROVINCIA DEL GUAYAS.
+
+ Jueza:
+AB. JARAMILLO HIDALGO MARIA LORENA   
+
+Nombre del Secretario:
+AB. MAURICIO VEJAR FREIRE
+
+Identificación del Proceso: 
+
+Número de Proceso:
+09286-2018-02102
+
+Lugar y Fecha de Realización:
+GUAYAQUIL, 21  DE JUNIO DE 2018
+
+Hora de Inicio:
+15h05
+
+Presunta Infracción:
+	INVESTIGACION PREVIA
+
+Desarrollo de la Audiencia:
+
+Tipo de Audiencia:
+Audiencia de Calificación de Flagrancia: (  x   )
+Audiencia de Formulación de Cargos: (  x   )
+Audiencia de Evaluación y Preparatoria de Juicio:  (    )
+Audiencia de Juicio: (     )
+Audiencia de Juzgamiento:  (     )
+Audiencia de Sustitución de Medidas:  (    )
+Audiencia de Suspensión Condicional:  (    )
+Audiencia de Acuerdos Reparatorios:  (    )
+Audiencia de Revocatoria de Suspensión Condicional:  (    )
+Audiencia de Medida Cautelar de Prisión Preventiva: (    )
+Audiencia de Procedimiento Abreviado:  (     )
+Audiencia de Procedimiento Simplificado: (    )
+Audiencia de Legalidad de Detención: (    )
+Audiencia de Revisión de Medidas Cautelares: (    )
+Audiencia de Apelación de Medidas Cautelares:  (    )
+Audiencia de Juzgamiento mediante Procedimiento Directo: (   ) 
+Audiencia de Régimen SemiAbierto (  )
+
+
+
+
+
+Intervinientes en la Audiencia:
+
+NOMBRE DEL FISCAL:	CASILLA JUDICIAL Y CORREO ELECTRÓNICO:
+AB.  DIEGO CHANGO LLERENA	3130
+
+
+
+
+VICTIMA.	NOMBRE DEL ABOGADO PATROCINADOR:	CASILLA JUDICIAL Y CORREO ELECTRÓNICO:
+		
+
+DETENIDO:	NOMBRE DEL ABOGADO DEFENSOR:	CASILLA JUDICIAL Y CORREO ELECTRÓNICO:
+PASICHE PEREYRA DANI ALEXIS	AB. EDISSON MULLO	emullo@defensoria.gob.ec 5563
+AGUIRRE RIOS JEAN-CARLOS	AB. SORIANO VINCES JACINTA ISAURA 	isaura_soriano1972@outlook.com 3704
+ROBLES RODRIGUEZ VALENTIN	AB. SUAREZ ESPINOZA JOSE VICENTE	vicentico1@outlook.com
+
+PASICHE PEREYRA DANI ALEXIS
+Actuaciones:
+Actuaciones del Procesado: 
+Justifica Arraigo Social:  			SI (    )   NO ( )
+Solicita medidas Sustitutivas:  		SI (    )   NO ( )
+Solicita Pericia:  				SI (    )   NO ( )
+Vicios de Procedibilidad:  			SI (    )   NO ( )
+Vicios de Competencia Territorial: 		SI (    )   NO ( )
+Existen Vicios Procesales:  			SI (    )   NO ( )
+Solicita Procedimiento Abreviado: 		SI (    )   NO ( )
+Solicita Acuerdo Reparatorio: 		SI (    )   NO ( )
+Otro (Especifique):
+Otro (Especifique):
+PASICHE PEREYRA DANI ALEXIS, manifiesta que en el momento de la detención le fueron leídos sus derechos constitucionales, la defensa técnica expresa que existe legalidad en la detención. 
+
+La defensa se allana a lo solicitado por fiscalía y solicita se levante las medidas que pesan sobre su defendida.
+
+AGUIRRE RIOS JEAN-CARLOS 
+Actuaciones:
+Actuaciones del Procesado: 
+Justifica Arraigo Social:  			SI (    )   NO ( )
+Solicita medidas Sustitutivas:  		SI (    )   NO ( )
+Solicita Pericia:  				SI (    )   NO ( )
+Vicios de Procedibilidad:  			SI (    )   NO ( )
+Vicios de Competencia Territorial: 		SI (    )   NO ( )
+Existen Vicios Procesales:  			SI (    )   NO ( )
+Solicita Procedimiento Abreviado: 		SI (    )   NO ( )
+Solicita Acuerdo Reparatorio: 		SI (    )   NO ( )
+Otro (Especifique):
+Otro (Especifique):
+AGUIRRE RIOS JEAN-CARLOS, manifiesta que en el momento de la detención le fueron leídos sus derechos constitucionales, expresa que el trafico se detuvo y que alcanzo a frenar. La defensa técnica expresa que existe legalidad en la detención. 
+
+La defensa se allana a lo solicitado por fiscalía y solicita se levante las medidas que pesan sobre su defendida.
+
+ROBLES RODRIGUEZ VALENTIN
+Actuaciones:
+Actuaciones del Procesado: 
+Justifica Arraigo Social:  			SI (    )   NO ( )
+Solicita medidas Sustitutivas:  		SI (    )   NO ( )
+Solicita Pericia:  				SI (    )   NO ( )
+Vicios de Procedibilidad:  			SI (    )   NO ( )
+Vicios de Competencia Territorial: 		SI (    )   NO ( )
+Existen Vicios Procesales:  			SI (    )   NO ( )
+Solicita Procedimiento Abreviado: 		SI (    )   NO ( )
+Solicita Acuerdo Reparatorio: 		SI (    )   NO ( )
+Otro (Especifique):
+Otro (Especifique):
+ROBLES RODRIGUEZ VALENTIN, manifiesta que en el momento de la detención le fueron leídos sus derechos constitucionales, expresa que freno a raya y que otro carro llego y se le fue encima. La defensa técnica expresa que existe legalidad en la detención. 
+
+La defensa se allana a lo solicitado por fiscalía y solicita se levante las medidas que pesan sobre su defendida.
+
+FISCALIA. 
+Solicita Prisión Preventiva:  			SI (    )  NO ( )
+Solicita Pericia:  				SI (    )  NO (  )
+Dictamen Acusatorio:  			SI (    )  NO (  )
+Dictamen Abstentivo: 				SI (    )  NO (  )
+Acepta Procedimiento Abreviado:  		SI (    )  NO (  )
+Solicita Procedimiento Simplificado: 		SI (    )  NO (  )
+Acepta Acuerdo Reparatorio: 			SI (    )  NO (  )
+Solicita Medidas Cautelares Reales:		SI (    )  NO (  )
+Solicita Medidas Cautelares 
+Personales:					SI (    )  NO (  )
+Solicita Medidas de Protección		SI (    )  NO (  )
+
+Otro (Especifique): La fiscalía expone la teoría del caso y los hechos que determina el parte informativo, manifiesta que no tiene nada de alegar en cuanto a la legalidad de la aprehensión y la flagrancia del hecho, motivo por el cual solicita que se califique la legalidad de la detención y la flagrancia del mismo, por cuanto existe un accidente de tránsito. Existiendo un accidente de tránsito donde existieron lesiones en el señor PASICHE PEREYRA DANI ALEXIS, el señor PASICHE PEREYRA DANI ALEXIS conductor del vehículo de placas IO509I, impacta su vehículo en contra del vehículo conducido por AGUIRRE RIOS JEAN-CARLOS conductor del vehículo de placas  GST6610, y este a su vez chancado al vehículo conducido por ROBLES RODRIGUEZ VALENTIN conductor del vehículo de placas GST4095, existe información recabada dentro del parte que no están claras, no se ha podido determinar quién era la persona que conducía el vehículo, no se ha podido determinar el valor de los daños materiales causados, no se tiene la posición jurídica de quienes son participes o quienes tienen la responsabilidad directa; la Fiscalía de conformidad al artículo 590, 591 y 595 del Código Orgánico Integral Penal, en uso de las atribuciones que le confiere la Constitución de la República del Ecuador en el art. 195, así como también en el Código Orgánico Integral Penal en su Art. 410, 411 y 442, como titular para dirigir las investigaciones preprocesal y procesal penal, fiscalía de conformidad al artículo 580 de Código Orgánico Integral Penal, manifiesta que no se encuentran reunidos los elementos de convicción y deja el presente expediente en INVESTIGACION PREVIA, 
+
+Extracto de la Resolución: El suscrito juzgador da inicio a la presente audiencia, toda vez que el actuario del despacho ha constatado la presencia de los sujetos procesales y habiendo escuchado las alegaciones de las partes debiendo pronunciarse sobre la Audiencia de Flagrancia lo hace de la siguiente forma: PRIMERO: La suscrita Jueza, es competente para resolver la presente causa de flagrancia por un delito de supuesto delito de lesiones causadas por accidente de tránsito de acuerdo a la resolución donde se le nombra de Jueza de la Unidad Judicial Norte 2 con sede en el Cantón Guayaquil, Provincia del Guayas, conforme también a lo establecido en el Art. 398 y siguientes del Código Orgánico Integral Penal, Art. 224 y 225 del Código Orgánico de la Función Judicial, por lo que la suscrita juzgadora asegura su competencia. SEGUNDO: Una vez escuchadas las partes procesales, se declara la legalidad de la detención y la flagrancia del delito, por cuanto cumple con lo estipulado en el Art. 527 y 528 del Código Orgánico Integral Penal. Una vez escuchado a la DEFENSA TÉCNICA DE PASICHE PEREYRA DANI ALEXIS, manifiesta que en el momento de la detención le fueron leídos sus derechos constitucionales, la defensa técnica expresa que existe legalidad en la detención. La defensa se allana a lo solicitado por fiscalía y solicita se levante las medidas que pesan sobre su defendida. LA DEFENSA TÉCNICA DE AGUIRRE RIOS JEAN-CARLOS,manifiesta que en el momento de la detención le fueron leídos sus derechos constitucionales, expresa que el tráfico se detuvo y que alcanzo a frenar. La defensa técnica expresa que existe legalidad en la detención. La defensa se allana a lo solicitado por fiscalía y solicita se levante las medidas que pesan sobre su defendida. DEFENSA TÉCNICA DE ROBLES RODRIGUEZ VALENTIN, manifiesta que en el momento de la detención le fueron leídos sus derechos constitucionales, expresa que freno a raya y que otro carro llego y se le fue encima. La defensa técnica expresa que existe legalidad en la detención. La defensa se allana a lo solicitado por fiscalía y solicita se levante las medidas que pesan sobre su defendida. FISCALIA expone la teoría del caso y los hechos que determina el parte informativo, manifiesta que no tiene nada de alegar en cuanto a la legalidad de la aprehensión y la flagrancia del hecho, motivo por el cual solicita que se califique la legalidad de la detención y la flagrancia del mismo, por cuanto existe un accidente de tránsito. Existiendo un accidente de tránsito donde existieron lesiones en el señor PASICHE PEREYRA DANI ALEXIS, el señor PASICHE PEREYRA DANI ALEXIS conductor del vehículo de placas IO509I, impacta su vehículo en contra del vehículo conducido por AGUIRRE RIOS JEAN-CARLOS conductor del vehículo de placas  GST6610, y este a su vez chancado al vehículo conducido por ROBLES RODRIGUEZ VALENTIN conductor del vehículo de placas GST4095, existe información recabada dentro del parte que no están claras, no se ha podido determinar quién era la persona que conducía el vehículo, no se ha podido determinar el valor de los daños materiales causados, no se tiene la posición jurídica de quienes son participes o quienes tienen la responsabilidad directa; la Fiscalía de conformidad al artículo 590, 591 y 595 del Código Orgánico Integral Penal, en uso de las atribuciones que le confiere la Constitución de la República del Ecuador en el art. 195, así como también en el Código Orgánico Integral Penal en su Art. 410, 411 y 442, como titular para dirigir las investigaciones preprocesal y procesal penal, fiscalía de conformidad al artículo 580 de Código Orgánico Integral Penal, manifiesta que no se encuentran reunidos los elementos de convicción y deja el presente expediente en INVESTIGACION PREVIA La JUEZA ha manifestado que fiscalía siendo el titular de acción penal pública y en uso de las atribuciones que le confiere la Constitución de la República del Ecuador en el art. 195, así como también en el Código Orgánico Integral Penal en su Art. 442, como titular para dirigir las investigaciones preprocesal y procesal penal, fiscalía de conformidad al artículo 580 de Código Orgánico Integral Penal, manifiesta que no se encuentran reunidos los elementos de convicción ha dejado el presente expediente en INVESTIGACION PREVIA; por los considerandos la Suscrita Juzgadora María Lorena Jaramillo Hidalgo, Jueza de la Unidad Judicial Norte 2 Penal con sede en el Cantón Guayaquil, Provincia del Guayas; considerar que no se encuentran reunidos los presupuestos establecidos en el artículo 534 del Código Orgánico Integral Penal; y, RESUELVE dejar el presente expediente en INVESTIGACION PREVIA por solicitud de  fiscalía como titular de la acción penal, por consiguiente levántese la custodia policial que pesa sobre el señor  PASICHE PEREYRA DANI ALEXIS, AGUIRRE RIOS JEAN-CARLOS Y ROBLES RODRIGUEZ VALENTIN.
+
+Razón:
+Dando cumplimiento a lo dispuesto en el Art. 6 numeral 7 del Reglamento para la grabación, archivo, custodia y conservación de las audiencias en materia penal, el contenido de la audiencia reposa en el archivo de la Judicatura. La presente acta queda debidamente suscrita conforme lo dispone la Ley, por el Secretario de la Unidad Judicial de Garantías Penales con Competencia en Delitos Flagrantes del cantón Guayaquil, el mismo que certifica su contenido. Las partes quedan notificadas con las decisiones adoptadas en la presente audiencia sin perjuicio de lo dispuesto en la Ley respecto de su notificación escrita en las casillas judiciales que las partes procesales han señalado para tal efecto, dicha audiencia ha sido grabada, teniendo un duración de treinta minutos aproximadamente.
+
+Hora de Finalización:
+15h35
+
+Sala
+202 (Florida)
+		ABG .MAURICIO VEJAR FREIRE
+SECRETARIO 

@@ -1,0 +1,15 @@
+09901-2010-0280  
+
+Providencia cargada automáticamente desde la información de estado digitada en el período de transición, durante la depuración de las causas.
+
+Estado Actual: TERMINADO
+Tipo de Terminación: SENTENCIA
+Forma de terminación: NEGANDO
+Ultima Actividad: SENTENCIADO
+Fecha de la última actividad: 05/09/2011
+Responsable del proceso: AB. NARCISO SELLAN HOLGUIN
+Fecha de Inicio: 30/03/2010
+Fecha de resolución: 11/03/2011
+Usuario: SELLANN
+Máquina: 02TRIB01GYE01,
+Fecha de digitación: 22/10/2

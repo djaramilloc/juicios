@@ -1,0 +1,15 @@
+09456-2012-0240* 
+
+Providencia cargada automáticamente desde la información de estado digitada en el período de transición, durante la depuración de las causas.
+
+Estado Actual: TERMINADO
+Tipo de Terminación: SENTENCIA
+Forma de terminación: CONDENATORIA
+Ultima Actividad: NOTIFICACION
+Fecha de la última actividad: 02/03/2012
+Responsable del proceso: AB. LUNA COELLO LUIS
+Fecha de Inicio: 19/02/2012
+Fecha de resolución: 19/02/2012
+Usuario: PIMENTELD
+Máquina: XMTRN06GYE02, PIMENTELD
+Fecha de digitaci

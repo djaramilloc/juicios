@@ -1,0 +1,14 @@
+09909-2011-0025  
+
+Providencia cargada automáticamente desde la información de estado digitada en el período de transición, durante la depuración de las causas.
+
+Estado Actual: TERMINADO
+Tipo de Terminación: SENTENCIA
+Forma de terminación: NEGANDO
+Ultima Actividad: RAZON SENTENCIA EJECUTORIADA
+Fecha de la última actividad: 25/03/2011
+Responsable del proceso: AB. MONICA ABAD MARISCAL MSC.
+Fecha de Inicio: 07/02/2011
+Fecha de resolución: 18/03/2011
+Usuario: ALVAREZA
+Máquina: X5TRIB09GYE02, ALVAREZ

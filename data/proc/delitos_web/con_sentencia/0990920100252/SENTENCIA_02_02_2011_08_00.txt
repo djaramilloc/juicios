@@ -1,0 +1,15 @@
+09909-2010-0252  
+
+Providencia cargada automáticamente desde la información de estado digitada en el período de transición, durante la depuración de las causas.
+
+Estado Actual: TERMINADO
+Tipo de Terminación: SENTENCIA
+Forma de terminación: ACEPTANDO
+Ultima Actividad: CUMPLIO PENA
+Fecha de la última actividad: 23/05/2011
+Responsable del proceso: AB. MONICA ABAD MARISCAL MSC.
+Fecha de Inicio: 22/11/2010
+Fecha de resolución: 02/02/2011
+Usuario: SALGUEROA
+Máquina: XMTRIB09GYE04, SALGUEROA
+Fecha de d

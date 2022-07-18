@@ -1,0 +1,15 @@
+09301-2010-0082  
+
+Providencia cargada automáticamente desde la información de estado digitada en el período de transición, durante la depuración de las causas.
+
+Estado Actual: TERMINADO
+Tipo de Terminación: SENTENCIA
+Forma de terminación: ACEPTANDO
+Ultima Actividad: DECRETO
+Fecha de la última actividad: 03/10/2011
+Responsable del proceso: DANNY CASTRO
+Fecha de Inicio: 27/01/2010
+Fecha de resolución: 20/10/2010
+Usuario: MARTINEZR
+Máquina: 04CIVIL01GYE03, MARTINEZR
+Fecha de digitación: 15/10/2011

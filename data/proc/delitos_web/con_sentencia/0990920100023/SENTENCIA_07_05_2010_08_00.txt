@@ -1,0 +1,15 @@
+09909-2010-0023  
+
+Providencia cargada automáticamente desde la información de estado digitada en el período de transición, durante la depuración de las causas.
+
+Estado Actual: TERMINADO
+Tipo de Terminación: SENTENCIA
+Forma de terminación: ACEPTANDO
+Ultima Actividad: PROVIDENCIA GENERAL
+Fecha de la última actividad: 30/09/2010
+Responsable del proceso: AB. ALBA ALVÁREZ R.
+Fecha de Inicio: 10/02/2010
+Fecha de resolución: 07/05/2010
+Usuario: SALGUEROA
+Máquina: XMTRIB09GYE04, SALGUEROA
+Fecha de digi

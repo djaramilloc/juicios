@@ -6,12 +6,11 @@ import sys
 import warnings
 
 # Set Paths
-root = here()
-proc = root/'data/proc'
-raw = root/'data/raw'
+proc = here()/'data/proc'
+raw = here()/'data/raw'
 
 # Load scraper
-sys.path.insert(1, (root/'code').as_posix())
+sys.path.insert(1, (here()/'code').as_posix())
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 from scrap_crimenes import scrap_procesos
 
@@ -22,7 +21,7 @@ delitos = list(delitos['NOMBRE DELITO'])
 # Which part it will compute
 cpu = 3
 
-procesos = pd.read_csv(proc/f'procesos_incompletos_{cpu}.csv', dtype={'id_proceso': str})
+procesos = pd.read_excel(proc/f'procesos_incompletos_{cpu}.csv', dtype={'id_proceso': str})
 procesos = procesos.loc[procesos['estado']==0].reset_index(drop=True)
 
 # Start wscrap

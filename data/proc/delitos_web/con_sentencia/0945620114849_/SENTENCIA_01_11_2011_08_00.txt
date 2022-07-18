@@ -1,0 +1,15 @@
+09456-2011-4849* 
+
+Providencia cargada automáticamente desde la información de estado digitada en el período de transición, durante la depuración de las causas.
+
+Estado Actual: TERMINADO
+Tipo de Terminación: SENTENCIA
+Forma de terminación: ABSOLUTORIA
+Ultima Actividad: ACTA GENERAL
+Fecha de la última actividad: 01/11/2011
+Responsable del proceso: LCDA. JENNIFER PONCE MERA
+Fecha de Inicio: 27/10/2011
+Fecha de resolución: 01/11/2011
+Usuario: PIMENTELD
+Máquina: XMTRN06GYE02, pimenteld
+Fecha de digi

@@ -1,0 +1,15 @@
+09909-2010-0145  
+
+Providencia cargada automáticamente desde la información de estado digitada en el período de transición, durante la depuración de las causas.
+
+Estado Actual: TERMINADO
+Tipo de Terminación: SENTENCIA
+Forma de terminación: NEGANDO
+Ultima Actividad: SENTENCIA ABSOLUTORIA
+Fecha de la última actividad: 11/03/2011
+Responsable del proceso: AB. ALBA ALVÁREZ R.
+Fecha de Inicio: 07/07/2010
+Fecha de resolución: 23/11/2010
+Usuario: SALGUEROA
+Máquina: XMTRIB09GYE04, SALGUEROA
+Fecha de digi

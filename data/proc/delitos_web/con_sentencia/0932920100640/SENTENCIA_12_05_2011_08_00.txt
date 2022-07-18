@@ -1,0 +1,15 @@
+09329-2010-0640  
+
+Providencia cargada automáticamente desde la información de estado digitada en el período de transición, durante la depuración de las causas.
+
+Estado Actual: TERMINADO
+Tipo de Terminación: SENTENCIA
+Forma de terminación: NEGANDO
+Ultima Actividad: RAZON
+Fecha de la última actividad: 15/10/2011
+Responsable del proceso: AB. ROBERTO LAZO
+Fecha de Inicio: 07/07/2010
+Fecha de resolución: 12/05/2011
+Usuario: LAZOR
+Máquina: 04CIVIL29GYE06, Lazor
+Fecha de digitación: 15/10/2011

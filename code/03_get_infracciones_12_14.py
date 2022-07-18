@@ -1,37 +1,32 @@
 import pandas as pd
-import numpy as np
 from pyprojroot import here
 import sys
 import warnings
 
 # Definir paths
-root = here()
-raw = root/'data/raw'
-proc = root/'data/proc'
+raw = here()/'data/raw'
+proc = here()/'data/proc'
 
 # Load programs
-sys.path.insert(1, (root/'code').as_posix())
+sys.path.insert(1, (here()/'code').as_posix())
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 from scrap_crimenes import obtener_infraccion
 
-
 # Load/create summary file
-process = 3
+process = 1
 # python code/03_get_infracciones_12_14.py
 faltan = True
 
 while faltan == True:
-    resumen = pd.read_csv(proc/f'resumenes/resumen_10_14_{process}.csv')
-
-    listos = resumen.loc[resumen['estado']!='por completar'].reset_index(drop=True)
-    faltantes = resumen.loc[resumen['estado']=='por completar'].reset_index(drop=True)
+    resumen = pd.read_excel(proc/f'delitos_web/sin_causa_{process}.xlsx', dtype=str)
+    listos = resumen.loc[resumen['estado']==1].reset_index(drop=True)
+    faltantes = resumen.loc[resumen['estado']==0].reset_index(drop=True)
 
     if faltantes.shape[0] == 0:
         faltan = False
         break
 
     else:
-
         depnumber = faltantes.loc[0, 'iddep']
         depnumber = "0"*(5 - len(str(depnumber))) + str(depnumber)
 

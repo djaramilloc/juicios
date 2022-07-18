@@ -1,0 +1,104 @@
+Datos:
+
+Nombre del Juez/a:
+      Dr. Eduardo Antonio Díaz Navarrete
+
+Nombre del Secretario/a:
+Ab. Zoila Jacqueline Arcentales Zambrano
+
+Identificación del Proceso:
+
+Número de Causa:
+3237-2014
+Lugar y Fecha de Realización:
+Guayaquil, 20 de Octubre del 2014
+Hora de Inicio:
+14H41
+Presunta Infracción/Delito/Contravención:
+ROBO
+Sala:
+3
+
+Desarrollo de la Audiencia: 
+
+Tipo de Audiencia:
+
+Audiencia de Calificación de Flagrancia: (     )
+Audiencia de Formulación de Cargos: (     )
+Audiencia Preparatoria de Juicio:  (  X   )
+Audiencia de Juicio: (      )
+Audiencia de Juzgamiento por procedimiento directo:  (     )
+Audiencia de Sustitución de Medidas:  (    )
+Audiencia de Suspensión Condicional:  (    )
+Audiencia de Acuerdos Reparatorios:  (    )
+Audiencia de Revocatoria de Suspensión Condicional:  (    )
+Audiencia de Medida Cautelar de Prisión Preventiva: (    )
+Audiencia de Procedimiento Abreviado:  (    )
+Audiencia de Procedimiento Simplificado: (    )
+Audiencia de Legalidad de Detención: (    )
+Audiencia de Revisión de Medidas Cautelares: (    )
+Audiencia de Apelación de Medidas Cautelares:  (    )
+
+Partes Procesales:
+
+Nombre del Fiscal:
+Casilla Judicial de Fiscalía:
+Ab.  ERNESTO SANCHEZ GIRON
+
+3130
+
+Procesado/s:
+Nombre Defensor:
+Casilla Judicial:
+LEONARDO EUSEBIO RAMIREZ SALAZAR 
+Ab. STALIN ANGULO ANGULO
+3331
+YEFERSON MAURICIO VASQUEZ BORBOR 
+Ab. ROLANDO RIOS GAIBOR
+5616
+
+Actuaciones:
+
+Actuaciones del Procesado:
+
+Justifica Arraigo Social:  			SI (    )   NO (    )
+Solicita Medidas Sustitutivas:  		SI (    )   NO (    )
+Solicita Pericia:  					SI (    )   NO (    )
+Vicios de Procedibilidad:  			SI (    )   NO (    )
+Vicios de Competencia Territorial: 		SI (    )   NO (    )
+Existen Vicios Procesales:  			SI (    )   NO (    )
+Solicita Procedimiento Abreviado:  		SI (    )   NO (    )
+Solicita Acuerdo Reparatorio: 	           		SI (    )   NO (    )
+Defensor del procesado  LEONARDO EUSEBIO RAMIREZ SALAZAR, quien dice: Señor Juez, señor Fiscal, dentro del proceso no se han violentado vicios de procedibilidad, siendo competente para conocer el presente caso.  La señora Fiscal ha declarado la abstención de acusar a mi defendido, por lo que luego de escuchar la intervención del señor Fiscal hemos pedido el expediente en el cual consta que el 22 de septiembre del 2014, hay impulso en cuanto a que la Dra. JUDY TUTIVEN GALVEZ, ha emitido un dictamen abstenido a favor de mi defendido, lo que no ha sido notificado al Juzgador, por lo que solicitamos que se resuelva la situación de mi cliente.  
+
+Defensor del procesado YEFERSON MAURICIO VASQUEZ BORBOR, quien dice: Señor Juez, en cuanto a los vicios no encuentro ninguno por tanto es competente para tramitar la audiencia. 
+
+
+
+
+Actuaciones de Fiscalía:
+
+Acusa:  						SI (   )   NO (    )
+Solicita Prisión Preventiva:  			SI (   )   NO (    )
+Solicita Pericia:  					SI (   )   NO (    )
+Dictamen Acusatorio:  				SI (   )  NO (    )
+Dictamen Abstentivo: 				SI (   )  NO (   )
+Acepta Procedimiento Abreviado:  		SI (   )  NO (    )
+Solicita Procedimiento Simplificado:      	SI (   )  NO (    )
+Acepta Acuerdo Reparatorio: 			SI (   )  NO (    )
+Solicita Medidas Cautelares: 			SI (   )  NO (    )
+Otro ( Especifique)
+ Señor Juez, no existen vicios de procedimiento. Represento a la Ab. JUDY TUTIVEN, Fiscal Séptima de Patrimonio. NOMBRES DE LOS PROCESADOS: LEONARDO EUSEBIO RAMIREZ SALAZAR y YEFERSON MAURICIO VASQUEZ BORBOR, cuyos generales de Ley constan del proceso. Denuncia presentada por GILAM HOLANDA MOLINA, en la que hace conocer a la Fiscalía las circunstancias de las que fue víctima por parte de LEONARDO EUSEBIO RAMIREZ SALAZAR y YEFERSON MAURICIO VASQUEZ BORBOR; Parte de detención de los procesados LEONARDO EUSEBIO RAMIREZ SALAZAR y YEFERSON MAURICIO VASQUEZ BORBOR, en donde se detallan las circunstancias de la detención de los mismos. ELEMENTOS: Versión de la denunciante; Comprobante de ingreso de evidencias, esto es la cartera con los artículos que se mencionan en el parte de detención y la cartuchera; Versión del agente aprehensor; Extracto de la audiencia de flagrancia; Versión del procesado LEONARDO EUSEBIO RAMIREZ SALAZAR; Versión del procesado YEFERSON MAURICIO VASQUEZ BORBOR, quien acepta el cometimiento del delito; Versión de otro de los agentes aprehensores; Versión de FRANKLIN NARANJO ALVEAR; Pericia balística del arma de fuego; Informe de investigaciones preliminares; Informe de grabados y marcas seriales de la moto marca Shineray; Certificados de los Tribunales Penales a favor de  LEONARDO EUSEBIO RAMIREZ SALAZAR. CONCLUSIONES: Los procesados han incurrido en el delito tipificado en el art. 189 del Código Orgánico Integral Penal, primer inciso. La Fiscalía hace un diferenciación, al señor YEFERSON MAURICIO VASQUEZ BORBOR, lo pone en calidad de autor, y al señor LEONARDO EUSEBIO RAMIREZ SALAZAR, lo pone en calidad de cómplice. La Fiscalía solicita a su señoría que ratifique la prisión preventiva en contra de los procesados y enuncia las pruebas a presentar. 
+
+Resolución del Juez:
+ Se declara la validez del proceso. Ante lo expuesto por el señor Ab. STALIN ANGULO ANGULO, Defensor del procesado LEONARDO EUSEBIO RAMIREZ SALAZAR, en cuanto a que la Fiscal titular a cargo de la investigación procesal de la instrucción hizo conocer su petición de convocatoria a la audiencia de evaluación y preparatoria de juicio, y en el mismo impulso hizo conocer su abstención de acusar a LEONARDO EUSEBIO RAMIREZ SALAZAR, lo que se refleja en el oficio No. 3255-FGE-FEPC7, suscrito por la Ab. JUDY TUTIVEN GALVEZ, que obra agregado a fjs. 19 del cuaderno procesal que reposa en esta Unidad Judicial Penal, sin que exista en el referido oficio el acompañamiento físico del dictamen fiscal con carácter abstentivo ni que se haya cumplido lo previsto en el segundo inciso del art. 600 del Código Orgánico Integral Penal, esto es notificar con dicho dictamen abstentivo al Juzgador para que disponga su notificación a los sujetos procesales, habiendo hecho mención en el referido oficio que en virtud de lo dispuesto en el art. 600 sexto inciso ibídem, elevó en consulta la abstención del Fiscal Provincial del Guayas, lo cual tampoco aparece del cuaderno procesal y obviamente tampoco existe la absolución a la consulta que se dice efectuada por lo que se considera que existen claras omisiones por parte de la Fiscal en mención. La indicada petición fiscal fue acogida en providencia del 25 de septiembre del 2014, las 12h05, por el señor Juez de despacho de la época, quien hizo la convocatoria a la audiencia preparatoria de juicio y de sustentación del dictamen fiscal, produciéndose un error en dicha providencia haciendo constar una fecha que no correspondía, error que en providencia del viernes 26 de septiembre del 2014, las 10h23, fue motivo de corrección subsanándose la disposición judicial, convocándose para el día 20 de octubre del 2014, a las 14h30. No consta que se haya tampoco notificado a los sujetos procesales con tal dictamen abstentivo quizás porque tampoco se remitió físicamente tal pronunciamiento, convocándose en forma indebida a esta audiencia en la que el señor Fiscal actuante en representación de la titular de la causa hizo su pronunciamiento y presentando y sustentando su dictamen que con respecto al procesado LEONARDO EUSEBIO RAMIREZ SALAZAR, resulta apartado de lo que expresara la Fiscal Ab. JUDY TUTIVEN GALVEZ, y por lo tanto provoca la invalidez de tal pronunciamiento, razón por la cual, conforme lo dispone el numeral 2 del art. 604 del Código Orgánico Integral Penal, que establece que el Juzgador resolverá sobre cuestiones referentes a la existencia de requisitos de procedibilidad, y cuestiones de procedimiento que puedan afectar la validez del proceso, DECLARA LA NULIDAD DE LA CONVOCATORIA HECHA PARA ESTA AUDIENCIA, en razón de que expresado el pronunciamiento por el señor Fiscal actuante influye en la decisión de la causa, sumándose tal circunstancia a lo no previsto por la señorita Fiscal y la convocatoria indebidamente realizada a esta audiencia, así mismo se DECLARA LA NULIDAD DE LO EXPUESTO POR LA FISCALIA, en cuanto al pronunciamiento hecho en relación al procesado LEONARDO EUSEBIO RAMIREZ SALAZAR. Esta declaratoria de nulidad deberá ser hecha a conocer a las partes y se deberá proceder a las rectificaciones del caso que provoca esta resolución que se expide al momento. 
+
+Razón:
+
+El contenido de la audiencia reposa en el archivo de la Judicatura. La presente acta queda debidamente suscrita conforme lo dispone la Ley, por la Secretaria de la Unidad Judicial De Garantías Penales Con Competencia En Delitos Flagrantes De Guayaquil, Provincia Del Guayas, el mismo que da fe de su contenido. Las partes quedan notificadas con las decisiones adoptadas en la presente audiencia sin perjuicio de lo dispuesto en la Ley respecto de su notificación escrita en las casillas judiciales que las partes procesales han señalado para tal efecto.
+
+Hora de Finalización:
+15h45
+
+Ab. Jacqueline Arcentales Zambrano
+SECRETARIA

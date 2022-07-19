@@ -13,9 +13,9 @@ warnings.filterwarnings("ignore", category=DeprecationWarning)
 from scrap_crimenes import infraccion_lista_delitos
 
 # Load/create summary file
-process = 1
-resumen = pd.read_excel(proc/f'delitos_web/sin_causa_{process}.xlsx', dtype=str)
-all_procesos = list(resumen.loc[resumen['estado']=='0', 'id_proceso'])
+process = 0
+resumen = pd.read_excel(proc/f'delitos_web/sin_causa.xlsx', dtype=str)
+all_procesos = list(resumen['id_proceso'])
 
 try: 
     results = pd.read_excel(proc/f'delitos_web/infracciones_{process}.xlsx', dtype=str)
@@ -30,14 +30,14 @@ except FileNotFoundError:
 
 # Run the first time and store results
 print(f'Start process {process}')
-res = infraccion_lista_delitos(faltantes, ventana=False)
+res = infraccion_lista_delitos(faltantes, ventana=False, delay=2)
 results = pd.concat([results, res['df']], ignore_index=True)
 results.to_excel(proc/f'delitos_web/infracciones_{process}.xlsx', index=False)
 
 # Loop while false
 while res['estado'] == False:
     faltantes = list(set(all_procesos) - set(results['causa']))
-    res = infraccion_lista_delitos(faltantes, ventana=False)
+    res = infraccion_lista_delitos(faltantes, ventana=False, delay=2)
     results = pd.concat([results, res['df']], ignore_index=True)
     results.to_excel(proc/f'delitos_web/infracciones_{process}.xlsx', index=False)
 

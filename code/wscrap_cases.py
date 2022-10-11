@@ -221,9 +221,8 @@ def scrap_court(cases_court:pd.DataFrame, documentos:list, idcourt:str, list_cri
         last_proceso = cases_court.loc[cases_court.shape[0]-1, 'id_proceso']
         last_proceso = re.sub('[^0-9]', '', last_proceso)
         y0 = int(last_proceso[5:8+1])
-        case0 = int(last_proceso[9:] + 1)
+        case0 = int(last_proceso[9:]) + 1
         ndigits = len(last_proceso[9:])
-
 
     # 3 - Loop over years and numeros
     for year in range(y0, 2021+1):
@@ -273,13 +272,9 @@ def scrap_court(cases_court:pd.DataFrame, documentos:list, idcourt:str, list_cri
                 # If we cannot get the data, return the result up to that point
                 driver.close()
                 print(f"Problemas con {res_dict['id_proceso']}, reiniciar")
-                scrap_court(cases_court, documentos, idcourt, list_crimenes, s)
+                return {'estado': False, 'df_estado':cases_court, 'docs': documentos}
 
-    # If all works good
-    try:
-        driver.close()
-    except InvalidSessionIdException:
-        pass
-    
+    # If it works
+    driver.close()
     print(f"Court {idcourt} done!!!")
-    return {'df_estado':cases_court, 'docs': documentos}
+    return {'estado':True, 'df_estado':cases_court, 'docs': documentos}

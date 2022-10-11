@@ -22,17 +22,16 @@ delitos_list = pd.read_csv(raw/'lista_delitos_15_20.csv')
 delitos_list = list(delitos_list['NOMBRE DELITO'])
 
 # Input a province
-idprov = '07'
+idprov = '08'
 
 # look over courts in prov
 courts_status = pd.read_parquet(proc/f'estado/prov{idprov}/courts_status.parquet')
-courts_status = courts_status.loc[courts_status['estado'].isna()] #Keep missing courts
 
 # Define Session for webdriver
 s = (Service(GeckoDriverManager().install()))
 
 # loop over missing courts
-for idcourt in np.unique(courts_status['id_dependencia']):
+for idcourt in np.unique(courts_status.loc[courts_status['estado'].isna(), 'id_dependencia']):
     
     # Look for file with status of download
     try:
@@ -41,11 +40,16 @@ for idcourt in np.unique(courts_status['id_dependencia']):
         cases_court = pd.DataFrame(columns=['id_proceso', 'causa', 'demandado', 'demandante'])
 
     # Webscrap data for each court
+    print(f'BEGIN COURT: {idcourt} -----------------------')
     results_court = scrap_court(cases_court, [], idcourt, delitos_list, s, delay=3)
-
+    
+    # Loop hasta finalizar con una court
+    while results_court['estado']==False:
+        results_court = scrap_court(results_court['df_estado'], results_court['docs'], idcourt, delitos_list, s, delay=3)
+    
     # Save Summary
-    results_court['df_estado'].to_parquet(proc/f"estado/prov{idprov}/cases_court_{idcourt}.parquet")
-
+    results_court['df_estado'].to_parquet(proc/f"estado/prov{idprov}/cases_court_{idcourt}.parquet", index=False)
+    
     # Save documentos
     for case_dict in results_court['docs']:
 
@@ -75,5 +79,5 @@ for idcourt in np.unique(courts_status['id_dependencia']):
                         _ = f_out.write(texto)
 
     # Update result of court
-    courts_status = courts_status.loc[courts_status['id_dependencia']==idcourt, 'estado'] = 1
-    courts_status.to_parquet(proc/f'estado/prov{idprov}/courts_status.parquet')
+    courts_status.loc[courts_status['id_dependencia']==idcourt, 'estado'] = 1
+    courts_status.to_parquet(proc/f'estado/prov{idprov}/courts_status.parquet', index=False)

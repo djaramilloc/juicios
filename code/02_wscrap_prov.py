@@ -22,7 +22,7 @@ delitos_list = pd.read_csv(raw/'lista_delitos_15_20.csv')
 delitos_list = list(delitos_list['NOMBRE DELITO'])
 
 # Input a province
-idprov = '01'
+idprov = '07'
 
 # look over courts in prov
 courts_status = pd.read_parquet(proc/f'estado/prov{idprov}/courts_status.parquet')

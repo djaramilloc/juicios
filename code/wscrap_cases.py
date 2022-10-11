@@ -221,15 +221,16 @@ def scrap_court(cases_court:pd.DataFrame, documentos:list, idcourt:str, list_cri
         last_proceso = cases_court.loc[cases_court.shape[0]-1, 'id_proceso']
         last_proceso = re.sub('[^0-9]', '', last_proceso)
         y0 = int(last_proceso[5:8+1])
-        case0 = int(last_proceso[9:])
+        case0 = int(last_proceso[9:] + 1)
         ndigits = len(last_proceso[9:])
 
 
     # 3 - Loop over years and numeros
-    for year in range(2014, 2021+1):
+    for year in range(y0, 2021+1):
 
         yearstr = str(year) # Convert year to string
         noexists_counter = 0 # Start counter for inexistent cases
+        case0 = case0 if year==y0 else 1 # Change initial case, based on year
 
         for numid in range(case0, 99999+1):
             

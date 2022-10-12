@@ -3,7 +3,6 @@ import pandas as pd
 import re
 
 import sys
-from pathlib import Path
 from pyprojroot import here
 
 from selenium.webdriver.firefox.service import Service
@@ -22,7 +21,7 @@ delitos_list = pd.read_csv(raw/'lista_delitos_15_20.csv')
 delitos_list = list(delitos_list['NOMBRE DELITO'])
 
 # Input a province
-idprov = '08'
+idprov = '09'
 
 # look over courts in prov
 courts_status = pd.read_parquet(proc/f'estado/prov{idprov}/courts_status.parquet')
@@ -41,43 +40,44 @@ for idcourt in np.unique(courts_status.loc[courts_status['estado'].isna(), 'id_d
 
     # Webscrap data for each court
     print(f'BEGIN COURT: {idcourt} -----------------------')
-    results_court = scrap_court(cases_court, [], idcourt, delitos_list, s, delay=3)
+    results_court = scrap_court(cases_court, idcourt, idprov, proc, delitos_list, s, delay=3)
     
+    last_caso = ''
+
     # Loop hasta finalizar con una court
     while results_court['estado']==False:
-        results_court = scrap_court(results_court['df_estado'], results_court['docs'], idcourt, delitos_list, s, delay=3)
+        
+        # check if the webscrapper is stuck in a value
+        if last_caso == "": # Primer errror en caso c, setear last_caso
+            last_caso = results_court['id_proceso']
+            nerrores_caso = 1
+        
+        elif last_caso == results_court['id_proceso']: # Si el error es el mismo aumentar counter
+            print(f"Intento N: {nerrores_caso}")
+            nerrores_caso = nerrores_caso + 1
+        
+        else: 
+            last_caso = ''
+            nerrores_caso = 0
+
+        # Keep looking if nerrores bellow threshold
+        if nerrores_caso <=10:
+            cases_court = pd.read_parquet(proc/f'estado/prov{idprov}/cases_court_{idcourt}.parquet')
+            results_court = scrap_court(cases_court, idcourt, idprov, proc, delitos_list, s, delay=3)
+        
+        else:
+            # Input data on not downloaded case
+            cases_court = pd.read_parquet(proc/f'estado/prov{idprov}/cases_court_{idcourt}.parquet')
+            # Find last case available
+            lastc = re.sub('[^0-9]', '', cases_court.loc[cases_court.shape[0]-1, 'id_proceso'])
+            # Add one to that value
+            inputc = lastc[0:9] + ((len(lastc) - 9) - len(str(int(lastc[9:]) + 1)))*"0" + str(int(lastc[9:]) + 1)
+            # Add that to the court being downloaded
+            cases_court = pd.concat([cases_court,
+                pd.DataFrame({'id_proceso': inputc, 'causa': 'No se puede descargar'}, index=[0])], ignore_index=True)
+            # Look again
+            results_court = scrap_court(cases_court, idcourt, idprov, proc, delitos_list, s, delay=3)
     
-    # Save Summary
-    results_court['df_estado'].to_parquet(proc/f"estado/prov{idprov}/cases_court_{idcourt}.parquet", index=False)
-    
-    # Save documentos
-    for case_dict in results_court['docs']:
-
-        # Access each dictionary
-        for idcase, docs_dict in case_dict.items():
-
-            # I only create folders for those with a doc downloaded
-            if docs_dict:
-                folder_name = idcase.replace('*', '_') # Set folder name
-                folder_name = re.sub(' ', '', folder_name)
-
-                # Create folders if they do not exist
-                try:
-                    Path(proc/f'docs/prov{idprov}/{folder_name}').mkdir(parents=True)
-                except FileExistsError:
-                    pass
-                
-                # Save docs
-                for filename_raw, texto in docs_dict.items():
-                    
-                    # Create name
-                    filename = filename_raw.replace(" ", "_")
-                    filename = filename.replace("/", "_")
-                    filename = filename.replace(":", "_")
-
-                    with open(proc/f'docs/prov{idprov}/{folder_name}/{filename}.txt', "w+") as f_out:
-                        _ = f_out.write(texto)
-
     # Update result of court
     courts_status.loc[courts_status['id_dependencia']==idcourt, 'estado'] = 1
     courts_status.to_parquet(proc/f'estado/prov{idprov}/courts_status.parquet', index=False)

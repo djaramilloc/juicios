@@ -16,6 +16,7 @@ from selenium.common.exceptions import ElementNotInteractableException
 from selenium.common.exceptions import ElementClickInterceptedException
 from selenium.common.exceptions import StaleElementReferenceException
 from selenium.common.exceptions import InvalidSessionIdException
+
 # Define wait for button
 def ingresar(element, espero):
     try:
@@ -190,7 +191,7 @@ def scrap_crimenes(driver, dependencia:str, year:str, secuencial:str, crimenes:l
             print(f"scrap_crimenes: {caract['id_proceso']} Existe y Descargado")
     return caracteristicas
 
-def scrap_court(cases_court:pd.DataFrame, documentos:list, idcourt:str, list_crimenes:list, s, ventana=False, delay=2):
+def scrap_court(cases_court:pd.DataFrame, idcourt:str, idprov:str, proc_path, list_crimenes:list, s, ventana=False, delay=2):
     """
     Parameters: 
     
@@ -259,22 +260,47 @@ def scrap_court(cases_court:pd.DataFrame, documentos:list, idcourt:str, list_cri
                         if 'No existe' in res_dict['causa']:
                             noexists_counter = noexists_counter + 1
 
+                    # Save docs
+                    documents_dict = {res_dict['id_proceso']: {key: res_dict[key] for key in res_dict.keys() if key not in ['id_proceso', 'causa', 'demandante', 'demandado']}}
+
+                    # Access each dictionary
+                    for idcase, docs_dict in documents_dict.items():
+
+                        # I only create folders for those with a doc downloaded
+                        if docs_dict:
+                            folder_name = idcase.replace('*', '_') # Set folder name
+                            folder_name = re.sub(' ', '', folder_name)
+
+                            # Create folders if they do not exist
+                            try:
+                                Path(proc_path/f'docs/prov{idprov}/{folder_name}').mkdir(parents=True)
+                            except FileExistsError:
+                                pass
+                            
+                            # Save docs
+                            for filename_raw, texto in docs_dict.items():
+                                
+                                # Create name
+                                filename = filename_raw.replace(" ", "_")
+                                filename = filename.replace("/", "_")
+                                filename = filename.replace(":", "_")
+
+                                with open(proc_path/f'docs/prov{idprov}/{folder_name}/{filename}.txt', "w+") as f_out:
+                                    _ = f_out.write(unidecode(texto))
+                    print(f"Case {res_dict['id_proceso']} docs saved")
+
                     # Concat status to dataframe
                     cases_court = pd.concat([cases_court, pd.DataFrame(sumcaso, index=[0])], ignore_index=True)
+                    cases_court.to_parquet(proc_path/f"estado/prov{idprov}/cases_court_{idcourt}.parquet", index=False)
+                    print(f"Status Case {res_dict['id_proceso']} updated")
 
-                    # Split the dict between estado del caso y datos para guardar
-                    for key in ['causa', 'demandante', 'demandado']:
-                        res_dict.pop(key, None)
-
-                    documentos.append({res_dict['id_proceso']: {key: res_dict[key] for key in res_dict.keys() if key!='id_proceso'}})
-                    
             except (ElementNotInteractableException, ElementClickInterceptedException, StaleElementReferenceException, AttributeError):
                 # If we cannot get the data, return the result up to that point
                 driver.close()
-                print(f"Problemas con {res_dict['id_proceso']}, reiniciar")
-                return {'estado': False, 'df_estado':cases_court, 'docs': documentos}
+                print(f"Problemas con {idcourt + yearstr + secstr}, reiniciar")
+                return {'estado': False, 'id_proceso': idcourt + yearstr + secstr}
 
     # If it works
     driver.close()
     print(f"Court {idcourt} done!!!")
-    return {'estado':True, 'df_estado':cases_court, 'docs': documentos}
+    return {'estado':True}
